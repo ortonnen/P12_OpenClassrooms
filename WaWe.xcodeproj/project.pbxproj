@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		812A416826443FA60075B756 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812A416726443FA60075B756 /* AppDelegate.swift */; };
-		812A416C26443FA60075B756 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812A416B26443FA60075B756 /* ViewController.swift */; };
 		812A416F26443FA60075B756 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 812A416D26443FA60075B756 /* Main.storyboard */; };
 		812A417126443FA60075B756 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 812A417026443FA60075B756 /* Assets.xcassets */; };
 		812A417426443FA60075B756 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 812A417226443FA60075B756 /* LaunchScreen.storyboard */; };
 		812A4198264480C00075B756 /* WaWeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812A4197264480C00075B756 /* WaWeTests.swift */; };
+		812A41A0264485870075B756 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812A419F264485870075B756 /* TabBarViewController.swift */; };
+		812A41A4264485D90075B756 /* RealmDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812A41A2264485D90075B756 /* RealmDataManager.swift */; };
+		812A41A5264485D90075B756 /* Recipes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812A41A3264485D90075B756 /* Recipes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +30,6 @@
 /* Begin PBXFileReference section */
 		812A416426443FA60075B756 /* WaWe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WaWe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		812A416726443FA60075B756 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		812A416B26443FA60075B756 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		812A416E26443FA60075B756 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		812A417026443FA60075B756 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		812A417326443FA60075B756 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +37,9 @@
 		812A4195264480C00075B756 /* WaWeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WaWeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		812A4197264480C00075B756 /* WaWeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaWeTests.swift; sourceTree = "<group>"; };
 		812A4199264480C00075B756 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		812A419F264485870075B756 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		812A41A2264485D90075B756 /* RealmDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmDataManager.swift; sourceTree = "<group>"; };
+		812A41A3264485D90075B756 /* Recipes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recipes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +111,7 @@
 		812A418F264480380075B756 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				812A416B26443FA60075B756 /* ViewController.swift */,
+				812A419F264485870075B756 /* TabBarViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -115,6 +119,7 @@
 		812A41902644809D0075B756 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				812A41A1264485B60075B756 /* Realm Data */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -126,6 +131,15 @@
 				812A4199264480C00075B756 /* Info.plist */,
 			);
 			path = WaWeTests;
+			sourceTree = "<group>";
+		};
+		812A41A1264485B60075B756 /* Realm Data */ = {
+			isa = PBXGroup;
+			children = (
+				812A41A2264485D90075B756 /* RealmDataManager.swift */,
+				812A41A3264485D90075B756 /* Recipes.swift */,
+			);
+			path = "Realm Data";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,8 +242,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				812A416C26443FA60075B756 /* ViewController.swift in Sources */,
+				812A41A0264485870075B756 /* TabBarViewController.swift in Sources */,
 				812A416826443FA60075B756 /* AppDelegate.swift in Sources */,
+				812A41A4264485D90075B756 /* RealmDataManager.swift in Sources */,
+				812A41A5264485D90075B756 /* Recipes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
