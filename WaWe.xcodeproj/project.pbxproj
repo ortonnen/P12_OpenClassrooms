@@ -18,6 +18,8 @@
 		81CB69382644892700F8F0BF /* RecipeServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CB69352644892700F8F0BF /* RecipeServices.swift */; };
 		81CB69392644892700F8F0BF /* ParametersSupportedBySpoonacular.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CB69362644892700F8F0BF /* ParametersSupportedBySpoonacular.swift */; };
 		81CB693A2644892700F8F0BF /* Spoonacular.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CB69372644892700F8F0BF /* Spoonacular.swift */; };
+		81CB693E264489F800F8F0BF /* Translate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CB693C264489F800F8F0BF /* Translate.swift */; };
+		81CB693F264489F800F8F0BF /* TranslateServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CB693D264489F800F8F0BF /* TranslateServices.swift */; };
 		B0BF079A32E6D983C7A8047A /* Pods_WaWe_WaWeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C29890B937987CADBBEB6747 /* Pods_WaWe_WaWeTests.framework */; };
 		EB584BE8D66E3AE2C3CFD3F9 /* Pods_WaWe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5F84DC7F96F960153BCD686 /* Pods_WaWe.framework */; };
 /* End PBXBuildFile section */
@@ -50,6 +52,8 @@
 		81CB69352644892700F8F0BF /* RecipeServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeServices.swift; sourceTree = "<group>"; };
 		81CB69362644892700F8F0BF /* ParametersSupportedBySpoonacular.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParametersSupportedBySpoonacular.swift; sourceTree = "<group>"; };
 		81CB69372644892700F8F0BF /* Spoonacular.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spoonacular.swift; sourceTree = "<group>"; };
+		81CB693C264489F800F8F0BF /* Translate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Translate.swift; sourceTree = "<group>"; };
+		81CB693D264489F800F8F0BF /* TranslateServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranslateServices.swift; sourceTree = "<group>"; };
 		A5F705BA82437D327564A031 /* Pods-WaWe-WaWeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaWe-WaWeTests.debug.xcconfig"; path = "Target Support Files/Pods-WaWe-WaWeTests/Pods-WaWe-WaWeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B5F84DC7F96F960153BCD686 /* Pods_WaWe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WaWe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C29890B937987CADBBEB6747 /* Pods_WaWe_WaWeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WaWe_WaWeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -146,6 +150,7 @@
 		812A41902644809D0075B756 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				81CB693B264489DD00F8F0BF /* Translate */,
 				81CB69342644890200F8F0BF /* Recipe API */,
 				812A41A1264485B60075B756 /* Realm Data */,
 			);
@@ -178,6 +183,15 @@
 				81CB69372644892700F8F0BF /* Spoonacular.swift */,
 			);
 			path = "Recipe API";
+			sourceTree = "<group>";
+		};
+		81CB693B264489DD00F8F0BF /* Translate */ = {
+			isa = PBXGroup;
+			children = (
+				81CB693C264489F800F8F0BF /* Translate.swift */,
+				81CB693D264489F800F8F0BF /* TranslateServices.swift */,
+			);
+			path = Translate;
 			sourceTree = "<group>";
 		};
 		AA0D68FF08B49371E894A319 /* Pods */ = {
@@ -376,8 +390,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81CB693E264489F800F8F0BF /* Translate.swift in Sources */,
 				812A41A0264485870075B756 /* TabBarViewController.swift in Sources */,
 				81CB69392644892700F8F0BF /* ParametersSupportedBySpoonacular.swift in Sources */,
+				81CB693F264489F800F8F0BF /* TranslateServices.swift in Sources */,
 				812A416826443FA60075B756 /* AppDelegate.swift in Sources */,
 				81CB69382644892700F8F0BF /* RecipeServices.swift in Sources */,
 				81CB693A2644892700F8F0BF /* Spoonacular.swift in Sources */,
