@@ -20,6 +20,7 @@
 		81CB693A2644892700F8F0BF /* Spoonacular.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CB69372644892700F8F0BF /* Spoonacular.swift */; };
 		81CB693E264489F800F8F0BF /* Translate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CB693C264489F800F8F0BF /* Translate.swift */; };
 		81CB693F264489F800F8F0BF /* TranslateServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CB693D264489F800F8F0BF /* TranslateServices.swift */; };
+		81CB694126448A6100F8F0BF /* ApiKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CB694026448A6100F8F0BF /* ApiKey.swift */; };
 		B0BF079A32E6D983C7A8047A /* Pods_WaWe_WaWeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C29890B937987CADBBEB6747 /* Pods_WaWe_WaWeTests.framework */; };
 		EB584BE8D66E3AE2C3CFD3F9 /* Pods_WaWe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5F84DC7F96F960153BCD686 /* Pods_WaWe.framework */; };
 /* End PBXBuildFile section */
@@ -54,6 +55,7 @@
 		81CB69372644892700F8F0BF /* Spoonacular.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spoonacular.swift; sourceTree = "<group>"; };
 		81CB693C264489F800F8F0BF /* Translate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Translate.swift; sourceTree = "<group>"; };
 		81CB693D264489F800F8F0BF /* TranslateServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranslateServices.swift; sourceTree = "<group>"; };
+		81CB694026448A6100F8F0BF /* ApiKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiKey.swift; sourceTree = "<group>"; };
 		A5F705BA82437D327564A031 /* Pods-WaWe-WaWeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaWe-WaWeTests.debug.xcconfig"; path = "Target Support Files/Pods-WaWe-WaWeTests/Pods-WaWe-WaWeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B5F84DC7F96F960153BCD686 /* Pods_WaWe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WaWe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C29890B937987CADBBEB6747 /* Pods_WaWe_WaWeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WaWe_WaWeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,6 +125,7 @@
 		812A418D26447FF30075B756 /* Other file */ = {
 			isa = PBXGroup;
 			children = (
+				81CB694026448A6100F8F0BF /* ApiKey.swift */,
 				812A417526443FA60075B756 /* Info.plist */,
 				812A416726443FA60075B756 /* AppDelegate.swift */,
 			);
@@ -390,6 +393,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81CB694126448A6100F8F0BF /* ApiKey.swift in Sources */,
 				81CB693E264489F800F8F0BF /* Translate.swift in Sources */,
 				812A41A0264485870075B756 /* TabBarViewController.swift in Sources */,
 				81CB69392644892700F8F0BF /* ParametersSupportedBySpoonacular.swift in Sources */,
