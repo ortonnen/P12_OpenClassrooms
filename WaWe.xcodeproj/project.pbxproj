@@ -8,26 +8,45 @@
 
 /* Begin PBXBuildFile section */
 		812A416826443FA60075B756 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812A416726443FA60075B756 /* AppDelegate.swift */; };
-		812A416A26443FA60075B756 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812A416926443FA60075B756 /* SceneDelegate.swift */; };
 		812A416C26443FA60075B756 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812A416B26443FA60075B756 /* ViewController.swift */; };
 		812A416F26443FA60075B756 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 812A416D26443FA60075B756 /* Main.storyboard */; };
 		812A417126443FA60075B756 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 812A417026443FA60075B756 /* Assets.xcassets */; };
 		812A417426443FA60075B756 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 812A417226443FA60075B756 /* LaunchScreen.storyboard */; };
+		812A4198264480C00075B756 /* WaWeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812A4197264480C00075B756 /* WaWeTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		812A419A264480C00075B756 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 812A415C26443FA60075B756 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 812A416326443FA60075B756;
+			remoteInfo = WaWe;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		812A416426443FA60075B756 /* WaWe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WaWe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		812A416726443FA60075B756 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		812A416926443FA60075B756 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		812A416B26443FA60075B756 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		812A416E26443FA60075B756 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		812A417026443FA60075B756 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		812A417326443FA60075B756 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		812A417526443FA60075B756 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		812A4195264480C00075B756 /* WaWeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WaWeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		812A4197264480C00075B756 /* WaWeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaWeTests.swift; sourceTree = "<group>"; };
+		812A4199264480C00075B756 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		812A416126443FA60075B756 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		812A4192264480C00075B756 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				812A416626443FA60075B756 /* WaWe */,
+				812A4196264480C00075B756 /* WaWeTests */,
 				812A416526443FA60075B756 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				812A416426443FA60075B756 /* WaWe.app */,
+				812A4195264480C00075B756 /* WaWeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,15 +77,55 @@
 		812A416626443FA60075B756 /* WaWe */ = {
 			isa = PBXGroup;
 			children = (
+				812A41902644809D0075B756 /* Model */,
+				812A418F264480380075B756 /* Controller */,
+				812A418E264480260075B756 /* View */,
+				812A418D26447FF30075B756 /* Other file */,
+			);
+			path = WaWe;
+			sourceTree = "<group>";
+		};
+		812A418D26447FF30075B756 /* Other file */ = {
+			isa = PBXGroup;
+			children = (
+				812A417526443FA60075B756 /* Info.plist */,
 				812A416726443FA60075B756 /* AppDelegate.swift */,
-				812A416926443FA60075B756 /* SceneDelegate.swift */,
-				812A416B26443FA60075B756 /* ViewController.swift */,
+			);
+			path = "Other file";
+			sourceTree = "<group>";
+		};
+		812A418E264480260075B756 /* View */ = {
+			isa = PBXGroup;
+			children = (
 				812A416D26443FA60075B756 /* Main.storyboard */,
 				812A417026443FA60075B756 /* Assets.xcassets */,
 				812A417226443FA60075B756 /* LaunchScreen.storyboard */,
-				812A417526443FA60075B756 /* Info.plist */,
 			);
-			path = WaWe;
+			path = View;
+			sourceTree = "<group>";
+		};
+		812A418F264480380075B756 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				812A416B26443FA60075B756 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		812A41902644809D0075B756 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		812A4196264480C00075B756 /* WaWeTests */ = {
+			isa = PBXGroup;
+			children = (
+				812A4197264480C00075B756 /* WaWeTests.swift */,
+				812A4199264480C00075B756 /* Info.plist */,
+			);
+			path = WaWeTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -87,6 +148,24 @@
 			productReference = 812A416426443FA60075B756 /* WaWe.app */;
 			productType = "com.apple.product-type.application";
 		};
+		812A4194264480C00075B756 /* WaWeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 812A419C264480C00075B756 /* Build configuration list for PBXNativeTarget "WaWeTests" */;
+			buildPhases = (
+				812A4191264480C00075B756 /* Sources */,
+				812A4192264480C00075B756 /* Frameworks */,
+				812A4193264480C00075B756 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				812A419B264480C00075B756 /* PBXTargetDependency */,
+			);
+			name = WaWeTests;
+			productName = WaWeTests;
+			productReference = 812A4195264480C00075B756 /* WaWeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -98,6 +177,10 @@
 				TargetAttributes = {
 					812A416326443FA60075B756 = {
 						CreatedOnToolsVersion = 12.5;
+					};
+					812A4194264480C00075B756 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 812A416326443FA60075B756;
 					};
 				};
 			};
@@ -115,6 +198,7 @@
 			projectRoot = "";
 			targets = (
 				812A416326443FA60075B756 /* WaWe */,
+				812A4194264480C00075B756 /* WaWeTests */,
 			);
 		};
 /* End PBXProject section */
@@ -130,6 +214,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		812A4193264480C00075B756 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -139,11 +230,26 @@
 			files = (
 				812A416C26443FA60075B756 /* ViewController.swift in Sources */,
 				812A416826443FA60075B756 /* AppDelegate.swift in Sources */,
-				812A416A26443FA60075B756 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		812A4191264480C00075B756 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				812A4198264480C00075B756 /* WaWeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		812A419B264480C00075B756 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 812A416326443FA60075B756 /* WaWe */;
+			targetProxy = 812A419A264480C00075B756 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		812A416D26443FA60075B756 /* Main.storyboard */ = {
@@ -288,7 +394,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XJPLMV5UNX;
-				INFOPLIST_FILE = WaWe/Info.plist;
+				INFOPLIST_FILE = "/Users/nathaliesimonnet/Desktop/P12_OpenClassrooms/WaWe/WaWe/Other file/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -296,7 +403,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.nathalieOrtonne.WaWe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -307,7 +414,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XJPLMV5UNX;
-				INFOPLIST_FILE = WaWe/Info.plist;
+				INFOPLIST_FILE = "/Users/nathaliesimonnet/Desktop/P12_OpenClassrooms/WaWe/WaWe/Other file/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -315,7 +423,47 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.nathalieOrtonne.WaWe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		812A419D264480C00075B756 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XJPLMV5UNX;
+				INFOPLIST_FILE = WaWeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nathalieOrtonne.WaWeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WaWe.app/WaWe";
+			};
+			name = Debug;
+		};
+		812A419E264480C00075B756 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XJPLMV5UNX;
+				INFOPLIST_FILE = WaWeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nathalieOrtonne.WaWeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WaWe.app/WaWe";
 			};
 			name = Release;
 		};
@@ -336,6 +484,15 @@
 			buildConfigurations = (
 				812A417926443FA60075B756 /* Debug */,
 				812A417A26443FA60075B756 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		812A419C264480C00075B756 /* Build configuration list for PBXNativeTarget "WaWeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				812A419D264480C00075B756 /* Debug */,
+				812A419E264480C00075B756 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
