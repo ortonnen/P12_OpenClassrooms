@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,9 @@
 		812A41A0264485870075B756 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812A419F264485870075B756 /* TabBarViewController.swift */; };
 		812A41A4264485D90075B756 /* RealmDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812A41A2264485D90075B756 /* RealmDataManager.swift */; };
 		812A41A5264485D90075B756 /* Recipes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812A41A3264485D90075B756 /* Recipes.swift */; };
+		81CB69382644892700F8F0BF /* RecipeServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CB69352644892700F8F0BF /* RecipeServices.swift */; };
+		81CB69392644892700F8F0BF /* ParametersSupportedBySpoonacular.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CB69362644892700F8F0BF /* ParametersSupportedBySpoonacular.swift */; };
+		81CB693A2644892700F8F0BF /* Spoonacular.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CB69372644892700F8F0BF /* Spoonacular.swift */; };
 		B0BF079A32E6D983C7A8047A /* Pods_WaWe_WaWeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C29890B937987CADBBEB6747 /* Pods_WaWe_WaWeTests.framework */; };
 		EB584BE8D66E3AE2C3CFD3F9 /* Pods_WaWe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5F84DC7F96F960153BCD686 /* Pods_WaWe.framework */; };
 /* End PBXBuildFile section */
@@ -44,6 +47,9 @@
 		812A419F264485870075B756 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		812A41A2264485D90075B756 /* RealmDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmDataManager.swift; sourceTree = "<group>"; };
 		812A41A3264485D90075B756 /* Recipes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recipes.swift; sourceTree = "<group>"; };
+		81CB69352644892700F8F0BF /* RecipeServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeServices.swift; sourceTree = "<group>"; };
+		81CB69362644892700F8F0BF /* ParametersSupportedBySpoonacular.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParametersSupportedBySpoonacular.swift; sourceTree = "<group>"; };
+		81CB69372644892700F8F0BF /* Spoonacular.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spoonacular.swift; sourceTree = "<group>"; };
 		A5F705BA82437D327564A031 /* Pods-WaWe-WaWeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaWe-WaWeTests.debug.xcconfig"; path = "Target Support Files/Pods-WaWe-WaWeTests/Pods-WaWe-WaWeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B5F84DC7F96F960153BCD686 /* Pods_WaWe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WaWe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C29890B937987CADBBEB6747 /* Pods_WaWe_WaWeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WaWe_WaWeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,6 +146,7 @@
 		812A41902644809D0075B756 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				81CB69342644890200F8F0BF /* Recipe API */,
 				812A41A1264485B60075B756 /* Realm Data */,
 			);
 			path = Model;
@@ -163,6 +170,16 @@
 			path = "Realm Data";
 			sourceTree = "<group>";
 		};
+		81CB69342644890200F8F0BF /* Recipe API */ = {
+			isa = PBXGroup;
+			children = (
+				81CB69362644892700F8F0BF /* ParametersSupportedBySpoonacular.swift */,
+				81CB69352644892700F8F0BF /* RecipeServices.swift */,
+				81CB69372644892700F8F0BF /* Spoonacular.swift */,
+			);
+			path = "Recipe API";
+			sourceTree = "<group>";
+		};
 		AA0D68FF08B49371E894A319 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,7 +188,6 @@
 				A5F705BA82437D327564A031 /* Pods-WaWe-WaWeTests.debug.xcconfig */,
 				6F1A19B694D4FD4E0B02744F /* Pods-WaWe-WaWeTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -361,7 +377,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				812A41A0264485870075B756 /* TabBarViewController.swift in Sources */,
+				81CB69392644892700F8F0BF /* ParametersSupportedBySpoonacular.swift in Sources */,
 				812A416826443FA60075B756 /* AppDelegate.swift in Sources */,
+				81CB69382644892700F8F0BF /* RecipeServices.swift in Sources */,
+				81CB693A2644892700F8F0BF /* Spoonacular.swift in Sources */,
 				812A41A4264485D90075B756 /* RealmDataManager.swift in Sources */,
 				812A41A5264485D90075B756 /* Recipes.swift in Sources */,
 			);
