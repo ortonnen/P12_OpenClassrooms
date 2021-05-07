@@ -245,6 +245,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="tappedSearchButton:" destination="HUL-jT-pDh" eventType="touchUpInside" id="mpT-xp-4GG"/>
+                                    <segue destination="KAW-i3-Nab" kind="show" identifier="searchRecipeSegueToRecipe" id="rDN-g8-9co"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uXy-La-aaQ">
@@ -317,7 +318,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="9tQ-1U-XXj"/>
+        <segue reference="rDN-g8-9co"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="highlighted" width="276" height="183"/>
