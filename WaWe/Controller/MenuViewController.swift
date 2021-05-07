@@ -20,9 +20,7 @@ class MenuViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print ( Realm.Configuration .defaultConfiguration.fileURL!)
-//        try! realm?.write({
-//            realm?.deleteAll()
-//        })
+        deleteAllData()
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
@@ -30,13 +28,13 @@ class MenuViewController: UIViewController {
         map()
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if let recipesVC = segue.destination as? RecipeViewController {
-//            guard recipes.count > 0 else {
-//               noRecipeCreateAlerte()
-//                return
-//            }
-//            recipesVC.recipes = recipes
-//        }
+        if let recipesVC = segue.destination as? RecipeViewController {
+            guard recipes.count > 0 else {
+               noRecipeCreateAlerte()
+                return
+            }
+            recipesVC.recipes = recipes
+        }
     }
     
     //MARK: Action
@@ -48,7 +46,14 @@ class MenuViewController: UIViewController {
     }
     
     //MARK: File Private Methods
-    fileprivate func map(){
+    ///methods to delete all element in data
+    fileprivate func deleteAllData() -> ()? {
+        return try! realm?.write({
+            realm?.deleteAll()
+        })
+    }
+    ///method to map Created Recipe in Recipe for recipe tableview
+    fileprivate func map() {
         guard let dataRecipes = realm?.objects(RecipeCreated.self) else {return}
         guard dataRecipes.count > 0 else {
             return}

@@ -105,20 +105,76 @@
         <!--Favoris-->
         <scene sceneID="yvq-ZX-kev">
             <objects>
-                <viewController id="KAW-i3-Nab" sceneMemberID="viewController">
+                <viewController id="KAW-i3-Nab" customClass="RecipeViewController" customModule="WaWe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Nuw-Ny-SyV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EY0-MX-O9o">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" red="0.96078431610000004" green="0.94901961089999998" blue="0.90196073060000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="sectionIndexBackgroundColor" red="0.96078431610000004" green="0.94901961089999998" blue="0.90196073060000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="recipeCell" rowHeight="184" id="Hii-L8-kPF" customClass="RecipesTableViewCell" customModule="WaWe" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="184"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Hii-L8-kPF" id="roY-99-wfn">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="184"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" highlightedImage="highlighted" translatesAutoresizingMaskIntoConstraints="NO" id="cxd-pB-DyF">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="184"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oQ5-yk-QJL">
+                                                    <rect key="frame" x="20" y="23" width="374" height="146"/>
+                                                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="24"/>
+                                                    <color key="textColor" red="0.59607845540000004" green="0.270588249" blue="0.20000001789999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="cxd-pB-DyF" firstAttribute="top" secondItem="roY-99-wfn" secondAttribute="top" id="2Is-9v-9QU"/>
+                                                <constraint firstAttribute="trailing" secondItem="cxd-pB-DyF" secondAttribute="trailing" id="7i6-Gw-OFD"/>
+                                                <constraint firstItem="oQ5-yk-QJL" firstAttribute="leading" secondItem="roY-99-wfn" secondAttribute="leadingMargin" id="8Lf-al-kPV"/>
+                                                <constraint firstItem="oQ5-yk-QJL" firstAttribute="top" secondItem="roY-99-wfn" secondAttribute="topMargin" constant="12" id="Aba-mP-rYA"/>
+                                                <constraint firstAttribute="bottom" secondItem="cxd-pB-DyF" secondAttribute="bottom" id="DdP-SV-LwD"/>
+                                                <constraint firstItem="cxd-pB-DyF" firstAttribute="leading" secondItem="roY-99-wfn" secondAttribute="leading" id="TXe-Nu-goj"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="oQ5-yk-QJL" secondAttribute="bottom" constant="4" id="Vyk-Jk-A8i"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="oQ5-yk-QJL" secondAttribute="trailing" id="guh-KD-TFd"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.96078431610000004" green="0.94901961089999998" blue="0.90196073060000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <outlet property="recipeImageView" destination="cxd-pB-DyF" id="XDh-nc-v8E"/>
+                                            <outlet property="titleLabel" destination="oQ5-yk-QJL" id="lzS-cm-C36"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="KAW-i3-Nab" id="8n9-Nz-LzN"/>
+                                    <outlet property="delegate" destination="KAW-i3-Nab" id="0KZ-1i-eew"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="xAj-lW-zvo"/>
                         <color key="backgroundColor" red="0.96078431610000004" green="0.94901961089999998" blue="0.90196073060000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="EY0-MX-O9o" firstAttribute="trailing" secondItem="xAj-lW-zvo" secondAttribute="trailing" id="Bvv-u6-AMU"/>
+                            <constraint firstItem="EY0-MX-O9o" firstAttribute="bottom" secondItem="xAj-lW-zvo" secondAttribute="bottom" id="a6i-nP-KS4"/>
+                            <constraint firstItem="EY0-MX-O9o" firstAttribute="top" secondItem="xAj-lW-zvo" secondAttribute="top" id="erR-wT-5cX"/>
+                            <constraint firstItem="EY0-MX-O9o" firstAttribute="leading" secondItem="xAj-lW-zvo" secondAttribute="leading" id="iPM-9f-OBp"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Favoris" id="KAr-99-gPT">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-16"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="recipeTableView" destination="EY0-MX-O9o" id="f37-Pl-uZv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p94-xL-qPJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="851" y="360"/>
+            <point key="canvasLocation" x="850.72463768115949" y="359.59821428571428"/>
         </scene>
         <!--Tab Bar View Controller-->
         <scene sceneID="V5x-b4-dfr">
@@ -141,4 +197,7 @@
             <point key="canvasLocation" x="-62" y="56"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="highlighted" width="276" height="183"/>
+    </resources>
 </document>
