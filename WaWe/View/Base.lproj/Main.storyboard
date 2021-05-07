@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Pav-Lq-M50">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -8,6 +8,100 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Recette-->
+        <scene sceneID="ITn-JO-QtA">
+            <objects>
+                <navigationController id="q5k-eO-mn0" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Recette" id="JGs-WN-dSh">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-16"/>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="S4J-Lg-uRK">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.96862745289999996" green="0.90196073060000004" blue="0.70588237050000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.59607845540000004" green="0.270588249" blue="0.20000001789999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="b3C-nM-EQ2" kind="relationship" relationship="rootViewController" id="8cz-ci-5o3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gYr-if-pdQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="851" y="-316"/>
+        </scene>
+        <!--WaWe-->
+        <scene sceneID="c5V-Hu-poS">
+            <objects>
+                <viewController id="b3C-nM-EQ2" customClass="MenuViewController" customModule="WaWe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5ev-wp-zVL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="ig6-K2-BRG">
+                                <rect key="frame" x="60" y="168" width="294" height="565"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6jF-dy-xrQ" customClass="RoundButton" customModule="WaWe" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="294" height="161.5"/>
+                                        <color key="backgroundColor" red="0.97647058959999999" green="0.86666667460000002" blue="0.59215688710000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
+                                        <state key="normal" title="Chercher une recette">
+                                            <color key="titleColor" red="0.59607845540000004" green="0.270588249" blue="0.20000001789999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="tappedSearchRecipeButton:" destination="b3C-nM-EQ2" eventType="touchUpInside" id="9Fq-Gh-xm9"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F3Z-as-urE" customClass="RoundButton" customModule="WaWe" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="201.5" width="294" height="162"/>
+                                        <color key="backgroundColor" red="0.97647058959999999" green="0.86666667460000002" blue="0.59215688710000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
+                                        <state key="normal" title="Créer une recette">
+                                            <color key="titleColor" red="0.59607845540000004" green="0.270588249" blue="0.20000001789999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="tappedCreateRecipeButton:" destination="b3C-nM-EQ2" eventType="touchUpInside" id="hKQ-AZ-BlW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zg3-6H-zlu" customClass="RoundButton" customModule="WaWe" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="403.5" width="294" height="161.5"/>
+                                        <color key="backgroundColor" red="0.97647058959999999" green="0.86666667460000002" blue="0.59215688710000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
+                                        <state key="normal" title="Consulter mes recettes">
+                                            <color key="titleColor" red="0.59607845540000004" green="0.270588249" blue="0.20000001789999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="tappedConsultRecipeButton:" destination="b3C-nM-EQ2" eventType="touchUpInside" id="1rb-LI-QPI"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="GeQ-qX-naF"/>
+                        <color key="backgroundColor" red="0.96078431610000004" green="0.94901961089999998" blue="0.90196073060000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="GeQ-qX-naF" firstAttribute="bottom" secondItem="ig6-K2-BRG" secondAttribute="bottom" constant="80" id="57I-Si-laa"/>
+                            <constraint firstItem="ig6-K2-BRG" firstAttribute="top" secondItem="GeQ-qX-naF" secondAttribute="top" constant="80" id="SWL-y7-jfZ"/>
+                            <constraint firstItem="ig6-K2-BRG" firstAttribute="leading" secondItem="GeQ-qX-naF" secondAttribute="leading" constant="60" id="drQ-Va-2w7"/>
+                            <constraint firstItem="GeQ-qX-naF" firstAttribute="trailing" secondItem="ig6-K2-BRG" secondAttribute="trailing" constant="60" id="ydr-ZS-vyn"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="WaWe" id="HTe-CO-cg9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IHT-w5-u5C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1820" y="-316"/>
+        </scene>
         <!--Favoris-->
         <scene sceneID="yvq-ZX-kev">
             <objects>
@@ -24,30 +118,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p94-xL-qPJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="828" y="360"/>
+            <point key="canvasLocation" x="851" y="360"/>
         </scene>
-        <!--Recette-->
-        <scene sceneID="TFW-DX-8B1">
-            <objects>
-                <viewController id="9Sk-uP-a1a" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="9cd-mE-6wU">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="cFf-aG-oiB"/>
-                        <color key="backgroundColor" red="0.96078431610000004" green="0.94901961089999998" blue="0.90196073060000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Recette" id="Ld6-qC-LMu">
-                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-16"/>
-                    </tabBarItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="UIs-G5-lyj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="828" y="-248"/>
-        </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="V5x-b4-dfr">
             <objects>
-                <tabBarController id="Pav-Lq-M50" sceneMemberID="viewController">
+                <tabBarController id="Pav-Lq-M50" customClass="TabBarViewController" customModule="WaWe" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fp0-ak-nAg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -56,8 +132,8 @@
                         <color key="selectedImageTintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="9Sk-uP-a1a" kind="relationship" relationship="viewControllers" id="zYj-tB-g3e"/>
                         <segue destination="KAW-i3-Nab" kind="relationship" relationship="viewControllers" id="MaP-aN-ucu"/>
+                        <segue destination="q5k-eO-mn0" kind="relationship" relationship="viewControllers" id="xs9-al-5MQ"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j4s-iv-Shw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -39,10 +39,10 @@ extension TabBarViewController: UITabBarControllerDelegate {
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
         recipes.removeAll()
         map()
-        if let recipeVC = viewController as? RecipeViewController {
-                recipeVC.recipes = recipes
-                recipeVC.recipeTableView.reloadData()
-            }
+//        if let recipeVC = viewController as? RecipeViewController {
+//                recipeVC.recipes = recipes
+//                recipeVC.recipeTableView.reloadData()
+//            }
     }
 }
 

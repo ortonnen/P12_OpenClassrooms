@@ -1,0 +1,69 @@
+//
+//  ViewController.swift
+//  Wawe
+//
+//  Created by Nathalie Simonnet on 04/01/2021.
+//
+
+
+import UIKit
+import RealmSwift
+
+//MARK: - Menu View Controller
+class MenuViewController: UIViewController {
+    //MARK: Properties
+    let realmDataManager = RealmDataManager()
+    let realm = try? Realm()
+    var recipes = [Recipe]()
+    
+    //MARK: Override Methods
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        print ( Realm.Configuration .defaultConfiguration.fileURL!)
+//        try! realm?.write({
+//            realm?.deleteAll()
+//        })
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        recipes.removeAll()
+        map()
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if let recipesVC = segue.destination as? RecipeViewController {
+//            guard recipes.count > 0 else {
+//               noRecipeCreateAlerte()
+//                return
+//            }
+//            recipesVC.recipes = recipes
+//        }
+    }
+    
+    //MARK: Action
+    @IBAction func tappedSearchRecipeButton(_ sender: Any) {
+    }
+    @IBAction func tappedCreateRecipeButton(_ sender: Any) {
+    }
+    @IBAction func tappedConsultRecipeButton(_ sender: Any) {
+    }
+    
+    //MARK: File Private Methods
+    fileprivate func map(){
+        guard let dataRecipes = realm?.objects(RecipeCreated.self) else {return}
+        guard dataRecipes.count > 0 else {
+            return}
+        for recipeCreated in dataRecipes{
+            recipes.append(realmDataManager.mapCreatedRecipeToRecipe(for: recipeCreated))
+        }
+    }
+}
+//MARK: - Alerte
+extension MenuViewController {
+    private func noRecipeCreateAlerte() {
+        let alerte = UIAlertController(title: "Aucune recette trouvée", message: "\n Vous n'avez pas de recette enregistrée\n", preferredStyle: .alert)
+        let alerteAction = UIAlertAction(title: "ok", style: .cancel, handler: nil)
+        alerte.addAction(alerteAction)
+        self.present(alerte, animated: true, completion: nil)
+    }
+}
+
