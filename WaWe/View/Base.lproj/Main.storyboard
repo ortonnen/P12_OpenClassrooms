@@ -82,6 +82,7 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="tappedConsultRecipeButton:" destination="b3C-nM-EQ2" eventType="touchUpInside" id="1rb-LI-QPI"/>
+                                            <segue destination="KAW-i3-Nab" kind="show" id="9tQ-1U-XXj"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -111,7 +112,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EY0-MX-O9o">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" red="0.96078431610000004" green="0.94901961089999998" blue="0.90196073060000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="sectionIndexBackgroundColor" red="0.96078431610000004" green="0.94901961089999998" blue="0.90196073060000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
@@ -168,13 +169,14 @@
                     <tabBarItem key="tabBarItem" title="Favoris" id="KAr-99-gPT">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-16"/>
                     </tabBarItem>
+                    <navigationItem key="navigationItem" id="O7x-uY-swm"/>
                     <connections>
                         <outlet property="recipeTableView" destination="EY0-MX-O9o" id="f37-Pl-uZv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p94-xL-qPJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="850.72463768115949" y="359.59821428571428"/>
+            <point key="canvasLocation" x="851" y="421"/>
         </scene>
         <!--Tab Bar View Controller-->
         <scene sceneID="V5x-b4-dfr">
@@ -197,6 +199,9 @@
             <point key="canvasLocation" x="-62" y="56"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="9tQ-1U-XXj"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="highlighted" width="276" height="183"/>
     </resources>

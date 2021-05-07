@@ -27,10 +27,15 @@ class MenuViewController: UIViewController {
         recipes.removeAll()
         map()
     }
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if recipes.count > 0 {
+            return true
+        }
+        return false
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let recipesVC = segue.destination as? RecipeViewController {
             guard recipes.count > 0 else {
-               noRecipeCreateAlerte()
                 return
             }
             recipesVC.recipes = recipes
@@ -43,6 +48,10 @@ class MenuViewController: UIViewController {
     @IBAction func tappedCreateRecipeButton(_ sender: Any) {
     }
     @IBAction func tappedConsultRecipeButton(_ sender: Any) {
+        guard recipes.count > 0 else {
+           noRecipeCreateAlerte()
+            return
+        }
     }
     
     //MARK: File Private Methods
