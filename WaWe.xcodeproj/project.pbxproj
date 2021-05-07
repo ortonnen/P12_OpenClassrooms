@@ -11,6 +11,7 @@
 		8128DC182645C3A100CC884A /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8128DC172645C3A100CC884A /* MenuViewController.swift */; };
 		8128DC1B2645C66000CC884A /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8128DC1A2645C66000CC884A /* RecipeViewController.swift */; };
 		8128DC1E2645C6F600CC884A /* RecipeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8128DC1D2645C6F600CC884A /* RecipeTableView.swift */; };
+		8128DC212645D09300CC884A /* SearchRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8128DC202645D09300CC884A /* SearchRecipeViewController.swift */; };
 		812A416826443FA60075B756 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812A416726443FA60075B756 /* AppDelegate.swift */; };
 		812A416F26443FA60075B756 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 812A416D26443FA60075B756 /* Main.storyboard */; };
 		812A417126443FA60075B756 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 812A417026443FA60075B756 /* Assets.xcassets */; };
@@ -46,6 +47,7 @@
 		8128DC172645C3A100CC884A /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		8128DC1A2645C66000CC884A /* RecipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
 		8128DC1D2645C6F600CC884A /* RecipeTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeTableView.swift; sourceTree = "<group>"; };
+		8128DC202645D09300CC884A /* SearchRecipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchRecipeViewController.swift; sourceTree = "<group>"; };
 		812A416426443FA60075B756 /* WaWe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WaWe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		812A416726443FA60075B756 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		812A416E26443FA60075B756 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -130,6 +132,14 @@
 			path = TableViewCell;
 			sourceTree = "<group>";
 		};
+		8128DC1F2645D07800CC884A /* Search Recipe */ = {
+			isa = PBXGroup;
+			children = (
+				8128DC202645D09300CC884A /* SearchRecipeViewController.swift */,
+			);
+			path = "Search Recipe";
+			sourceTree = "<group>";
+		};
 		812A415B26443FA60075B756 = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +196,7 @@
 		812A418F264480380075B756 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				8128DC1F2645D07800CC884A /* Search Recipe */,
 				8128DC192645C63100CC884A /* Recipe */,
 				812A419F264485870075B756 /* TabBarViewController.swift */,
 				8128DC172645C3A100CC884A /* MenuViewController.swift */,
@@ -443,6 +454,7 @@
 				812A41A0264485870075B756 /* TabBarViewController.swift in Sources */,
 				81CB69392644892700F8F0BF /* ParametersSupportedBySpoonacular.swift in Sources */,
 				8128DC162645C27100CC884A /* RoundButton.swift in Sources */,
+				8128DC212645D09300CC884A /* SearchRecipeViewController.swift in Sources */,
 				81CB693F264489F800F8F0BF /* TranslateServices.swift in Sources */,
 				812A416826443FA60075B756 /* AppDelegate.swift in Sources */,
 				8128DC1B2645C66000CC884A /* RecipeViewController.swift in Sources */,

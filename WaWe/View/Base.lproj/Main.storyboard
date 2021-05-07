@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Pav-Lq-M50">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -16,7 +16,7 @@
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-16"/>
                     </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="S4J-Lg-uRK">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="428" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.96862745289999996" green="0.90196073060000004" blue="0.70588237050000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <textAttributes key="titleTextAttributes">
@@ -36,14 +36,14 @@
             <objects>
                 <viewController id="b3C-nM-EQ2" customClass="MenuViewController" customModule="WaWe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5ev-wp-zVL">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="ig6-K2-BRG">
-                                <rect key="frame" x="60" y="168" width="294" height="565"/>
+                                <rect key="frame" x="60" y="168" width="308" height="595"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6jF-dy-xrQ" customClass="RoundButton" customModule="WaWe" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="294" height="161.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="308" height="171.66666666666666"/>
                                         <color key="backgroundColor" red="0.97647058959999999" green="0.86666667460000002" blue="0.59215688710000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
                                         <state key="normal" title="Chercher une recette">
@@ -54,10 +54,11 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="tappedSearchRecipeButton:" destination="b3C-nM-EQ2" eventType="touchUpInside" id="9Fq-Gh-xm9"/>
+                                            <segue destination="HUL-jT-pDh" kind="show" id="mcf-D0-gG3"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F3Z-as-urE" customClass="RoundButton" customModule="WaWe" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="201.5" width="294" height="162"/>
+                                        <rect key="frame" x="0.0" y="211.66666666666669" width="308" height="171.66666666666669"/>
                                         <color key="backgroundColor" red="0.97647058959999999" green="0.86666667460000002" blue="0.59215688710000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
                                         <state key="normal" title="Créer une recette">
@@ -71,7 +72,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zg3-6H-zlu" customClass="RoundButton" customModule="WaWe" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="403.5" width="294" height="161.5"/>
+                                        <rect key="frame" x="0.0" y="423.33333333333337" width="308" height="171.66666666666663"/>
                                         <color key="backgroundColor" red="0.97647058959999999" green="0.86666667460000002" blue="0.59215688710000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
                                         <state key="normal" title="Consulter mes recettes">
@@ -108,26 +109,26 @@
             <objects>
                 <viewController id="KAW-i3-Nab" customClass="RecipeViewController" customModule="WaWe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Nuw-Ny-SyV">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EY0-MX-O9o">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="88" width="428" height="755"/>
                                 <color key="backgroundColor" red="0.96078431610000004" green="0.94901961089999998" blue="0.90196073060000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="sectionIndexBackgroundColor" red="0.96078431610000004" green="0.94901961089999998" blue="0.90196073060000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="recipeCell" rowHeight="184" id="Hii-L8-kPF" customClass="RecipesTableViewCell" customModule="WaWe" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="24.5" width="414" height="184"/>
+                                        <rect key="frame" x="0.0" y="24.333333969116211" width="428" height="184"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Hii-L8-kPF" id="roY-99-wfn">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="184"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="428" height="184"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" highlightedImage="highlighted" translatesAutoresizingMaskIntoConstraints="NO" id="cxd-pB-DyF">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="184"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="428" height="184"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oQ5-yk-QJL">
-                                                    <rect key="frame" x="20" y="23" width="374" height="146"/>
+                                                    <rect key="frame" x="20" y="23" width="388" height="146"/>
                                                     <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="24"/>
                                                     <color key="textColor" red="0.59607845540000004" green="0.270588249" blue="0.20000001789999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
@@ -177,6 +178,122 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p94-xL-qPJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="851" y="421"/>
+        </scene>
+        <!--Search Recipe View Controller-->
+        <scene sceneID="82X-pM-icw">
+            <objects>
+                <viewController id="HUL-jT-pDh" customClass="SearchRecipeViewController" customModule="WaWe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zqt-zu-cMM">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="Ex: Tomate" translatesAutoresizingMaskIntoConstraints="NO" id="OEo-lv-rbQ">
+                                <rect key="frame" x="0.0" y="134" width="428" height="51"/>
+                                <color key="barTintColor" red="0.96078431610000004" green="0.94901961089999998" blue="0.90196073060000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="continue"/>
+                                <connections>
+                                    <outlet property="delegate" destination="HUL-jT-pDh" id="Gpa-8F-pf5"/>
+                                </connections>
+                            </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Que souhaitez-vous cuisiner ?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IPH-mm-TX2">
+                                <rect key="frame" x="0.0" y="100" width="428" height="22"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
+                                <color key="textColor" red="0.59607845540000004" green="0.270588249" blue="0.20000001789999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7rx-FW-3r1">
+                                <rect key="frame" x="12" y="185" width="404" height="546"/>
+                                <color key="backgroundColor" red="0.96078431610000004" green="0.94901961089999998" blue="0.90196073060000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="sectionIndexBackgroundColor" red="0.96078431610000004" green="0.94901961089999998" blue="0.90196073060000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ingredientCell" textLabel="9ZB-na-fAt" style="IBUITableViewCellStyleDefault" id="J8v-Az-Gra">
+                                        <rect key="frame" x="0.0" y="24.333333969116211" width="404" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="J8v-Az-Gra" id="7EB-9o-tX0">
+                                            <rect key="frame" x="0.0" y="0.0" width="404" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="- Tomate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9ZB-na-fAt">
+                                                    <rect key="frame" x="20" y="0.0" width="364" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="18"/>
+                                                    <color key="textColor" red="0.59607845540000004" green="0.270588249" blue="0.20000001789999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.96078431610000004" green="0.94901961089999998" blue="0.90196073060000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="HUL-jT-pDh" id="Hp7-o6-wYS"/>
+                                    <outlet property="delegate" destination="HUL-jT-pDh" id="gPT-nO-0MD"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tVk-7V-hq9" customClass="RoundButton" customModule="WaWe" customModuleProvider="target">
+                                <rect key="frame" x="40" y="791" width="348" height="32"/>
+                                <color key="backgroundColor" red="0.97647058959999999" green="0.86666667460000002" blue="0.59215688710000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="b9d-Kg-Jpy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
+                                <state key="normal" title="Rechercher">
+                                    <color key="titleColor" red="0.59607845540000004" green="0.270588249" blue="0.20000001789999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="tappedSearchButton:" destination="HUL-jT-pDh" eventType="touchUpInside" id="mpT-xp-4GG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uXy-La-aaQ">
+                                <rect key="frame" x="20" y="739" width="53" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="52" id="Rve-44-Ke3"/>
+                                    <constraint firstAttribute="height" constant="32" id="X6Y-bt-way"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="18"/>
+                                <state key="normal" title="+ Filtre">
+                                    <color key="titleColor" red="0.59607845540000004" green="0.270588249" blue="0.20000001789999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="tappedFilteredButton:" destination="HUL-jT-pDh" eventType="touchUpInside" id="k3a-Pa-A7l"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Jdg-Ce-eVF"/>
+                        <color key="backgroundColor" red="0.96078431610000004" green="0.94901961089999998" blue="0.90196073060000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Jdg-Ce-eVF" firstAttribute="trailing" secondItem="7rx-FW-3r1" secondAttribute="trailing" constant="12" id="1cT-hC-hJp"/>
+                            <constraint firstItem="Jdg-Ce-eVF" firstAttribute="bottom" secondItem="tVk-7V-hq9" secondAttribute="bottom" constant="20" id="3g8-2m-hwo"/>
+                            <constraint firstItem="OEo-lv-rbQ" firstAttribute="trailing" secondItem="Jdg-Ce-eVF" secondAttribute="trailing" id="3yS-pW-DCK"/>
+                            <constraint firstItem="7rx-FW-3r1" firstAttribute="leading" secondItem="Jdg-Ce-eVF" secondAttribute="leading" constant="12" id="5R2-E7-zDv"/>
+                            <constraint firstItem="7rx-FW-3r1" firstAttribute="top" secondItem="OEo-lv-rbQ" secondAttribute="bottom" id="AY6-Mi-2I6"/>
+                            <constraint firstItem="Jdg-Ce-eVF" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="uXy-La-aaQ" secondAttribute="trailing" symbolic="YES" id="QT6-qG-zNH"/>
+                            <constraint firstItem="Jdg-Ce-eVF" firstAttribute="trailing" secondItem="tVk-7V-hq9" secondAttribute="trailing" constant="40" id="RqT-Bv-dJt"/>
+                            <constraint firstItem="IPH-mm-TX2" firstAttribute="top" secondItem="Jdg-Ce-eVF" secondAttribute="top" constant="12" id="To7-CS-gJs"/>
+                            <constraint firstItem="OEo-lv-rbQ" firstAttribute="leading" secondItem="Jdg-Ce-eVF" secondAttribute="leading" id="Va8-8X-34u"/>
+                            <constraint firstItem="IPH-mm-TX2" firstAttribute="leading" secondItem="Jdg-Ce-eVF" secondAttribute="leading" id="Vdw-AJ-xZQ"/>
+                            <constraint firstItem="IPH-mm-TX2" firstAttribute="trailing" secondItem="Jdg-Ce-eVF" secondAttribute="trailing" id="YPa-gR-rZK"/>
+                            <constraint firstItem="tVk-7V-hq9" firstAttribute="leading" secondItem="Jdg-Ce-eVF" secondAttribute="leading" constant="40" id="gI0-U1-nJP"/>
+                            <constraint firstItem="OEo-lv-rbQ" firstAttribute="top" secondItem="IPH-mm-TX2" secondAttribute="bottom" constant="12" id="soA-m7-YQn"/>
+                            <constraint firstItem="uXy-La-aaQ" firstAttribute="top" secondItem="7rx-FW-3r1" secondAttribute="bottom" constant="8" id="wsQ-qH-ZQY"/>
+                            <constraint firstItem="uXy-La-aaQ" firstAttribute="leading" secondItem="Jdg-Ce-eVF" secondAttribute="leading" constant="20" id="xQs-r7-cuO"/>
+                            <constraint firstItem="tVk-7V-hq9" firstAttribute="top" secondItem="uXy-La-aaQ" secondAttribute="bottom" constant="20" id="zbL-mE-bO3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="dlf-wR-4qI"/>
+                    <connections>
+                        <outlet property="filteredButton" destination="uXy-La-aaQ" id="GQl-b8-QHH"/>
+                        <outlet property="ingredientSearchBar" destination="OEo-lv-rbQ" id="W28-zA-wDg"/>
+                        <outlet property="ingredientTableView" destination="7rx-FW-3r1" id="oEr-a2-1ul"/>
+                        <outlet property="searchButton" destination="tVk-7V-hq9" id="41R-Jf-VJE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XSX-jC-xjM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1818.840579710145" y="420.53571428571428"/>
         </scene>
         <!--Tab Bar View Controller-->
         <scene sceneID="V5x-b4-dfr">

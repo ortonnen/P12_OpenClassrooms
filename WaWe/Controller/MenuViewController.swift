@@ -15,6 +15,7 @@ class MenuViewController: UIViewController {
     let realmDataManager = RealmDataManager()
     let realm = try? Realm()
     var recipes = [Recipe]()
+    var isCreateRecipeSegue = false
     
     //MARK: Override Methods
     override func viewDidLoad() {
@@ -28,10 +29,13 @@ class MenuViewController: UIViewController {
         map()
     }
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        if recipes.count > 0 {
-            return true
+        if isCreateRecipeSegue == true {
+            if recipes.count > 0 {
+                return true
+            }
+            return false
         }
-        return false
+        return true
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let recipesVC = segue.destination as? RecipeViewController {
@@ -44,12 +48,15 @@ class MenuViewController: UIViewController {
     
     //MARK: Action
     @IBAction func tappedSearchRecipeButton(_ sender: Any) {
+        isCreateRecipeSegue = false
     }
     @IBAction func tappedCreateRecipeButton(_ sender: Any) {
+        isCreateRecipeSegue = false
     }
     @IBAction func tappedConsultRecipeButton(_ sender: Any) {
+        isCreateRecipeSegue = true
         guard recipes.count > 0 else {
-           noRecipeCreateAlerte()
+            noRecipeCreateAlerte()
             return
         }
     }
