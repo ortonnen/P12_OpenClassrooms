@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		812592292646DCE9002B72EC /* MoreInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812592282646DCE9002B72EC /* MoreInformationViewController.swift */; };
+		8125922B2646DDB7002B72EC /* FilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8125922A2646DDB7002B72EC /* FilterTableViewCell.swift */; };
 		8128DC162645C27100CC884A /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8128DC152645C27100CC884A /* RoundButton.swift */; };
 		8128DC182645C3A100CC884A /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8128DC172645C3A100CC884A /* MenuViewController.swift */; };
 		8128DC1B2645C66000CC884A /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8128DC1A2645C66000CC884A /* RecipeViewController.swift */; };
@@ -43,6 +45,8 @@
 /* Begin PBXFileReference section */
 		506ED3C707B6477154379224 /* Pods-WaWe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaWe.debug.xcconfig"; path = "Target Support Files/Pods-WaWe/Pods-WaWe.debug.xcconfig"; sourceTree = "<group>"; };
 		6F1A19B694D4FD4E0B02744F /* Pods-WaWe-WaWeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaWe-WaWeTests.release.xcconfig"; path = "Target Support Files/Pods-WaWe-WaWeTests/Pods-WaWe-WaWeTests.release.xcconfig"; sourceTree = "<group>"; };
+		812592282646DCE9002B72EC /* MoreInformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreInformationViewController.swift; sourceTree = "<group>"; };
+		8125922A2646DDB7002B72EC /* FilterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterTableViewCell.swift; sourceTree = "<group>"; };
 		8128DC152645C27100CC884A /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		8128DC172645C3A100CC884A /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		8128DC1A2645C66000CC884A /* RecipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
@@ -127,6 +131,7 @@
 		8128DC1C2645C6D600CC884A /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				8125922A2646DDB7002B72EC /* FilterTableViewCell.swift */,
 				8128DC1D2645C6F600CC884A /* RecipeTableView.swift */,
 			);
 			path = TableViewCell;
@@ -135,6 +140,7 @@
 		8128DC1F2645D07800CC884A /* Search Recipe */ = {
 			isa = PBXGroup;
 			children = (
+				812592282646DCE9002B72EC /* MoreInformationViewController.swift */,
 				8128DC202645D09300CC884A /* SearchRecipeViewController.swift */,
 			);
 			path = "Search Recipe";
@@ -454,6 +460,7 @@
 				812A41A0264485870075B756 /* TabBarViewController.swift in Sources */,
 				81CB69392644892700F8F0BF /* ParametersSupportedBySpoonacular.swift in Sources */,
 				8128DC162645C27100CC884A /* RoundButton.swift in Sources */,
+				812592292646DCE9002B72EC /* MoreInformationViewController.swift in Sources */,
 				8128DC212645D09300CC884A /* SearchRecipeViewController.swift in Sources */,
 				81CB693F264489F800F8F0BF /* TranslateServices.swift in Sources */,
 				812A416826443FA60075B756 /* AppDelegate.swift in Sources */,
@@ -461,6 +468,7 @@
 				8128DC182645C3A100CC884A /* MenuViewController.swift in Sources */,
 				81CB69382644892700F8F0BF /* RecipeServices.swift in Sources */,
 				81CB693A2644892700F8F0BF /* Spoonacular.swift in Sources */,
+				8125922B2646DDB7002B72EC /* FilterTableViewCell.swift in Sources */,
 				812A41A4264485D90075B756 /* RealmDataManager.swift in Sources */,
 				812A41A5264485D90075B756 /* Recipes.swift in Sources */,
 			);
