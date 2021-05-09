@@ -20,7 +20,7 @@ class SearchRecipeViewController: UIViewController {
     
     var isWorking: Bool = false
     
-//    let vc = MoreInformationViewController(nibName: "MoreInformationViewController", bundle: nil)
+    let vc = MoreInformationViewController(nibName: "MoreInformationViewController", bundle: nil)
     let realmDataManager = RealmDataManager()
     
     //MARK: Outlet
@@ -32,7 +32,7 @@ class SearchRecipeViewController: UIViewController {
     //MARK: Methods Override
     override func viewDidLoad() {
         super.viewDidLoad()
-//        vc.delegate = self
+        vc.delegate = self
         
         ingredientTableView.delegate = self
         ingredientTableView.dataSource = self
@@ -52,10 +52,9 @@ class SearchRecipeViewController: UIViewController {
         if let recipesVC = segue.destination as? RecipeViewController {
             recipesVC.recipes = recipes
             clear()
+        } else if let moreInformationVC = segue.destination as? MoreInformationViewController {
+            moreInformationVC.delegate = self
         }
-//        } else if let moreInformationVC = segue.destination as? MoreInformationViewController {
-//            moreInformationVC.delegate = self
-//        }
     }
     
     //MARK: Action
@@ -149,15 +148,15 @@ class SearchRecipeViewController: UIViewController {
 
 
 //MARK:- Protocol
-//extension SearchRecipeViewController: PassingDataDelegateProtocol{
-//    ///func to update parameters for call network
-//    func updateData(for dietArray: [String], intoleranceArray: [String], cuisineArray: [String], mealArray: [String]) {
-//        diet = dietArray.joined(separator: ",")
-//        intolerance = intoleranceArray.joined(separator: ",")
-//        typeOfCuisine = cuisineArray.joined(separator: ",")
-//        typeOfMeal = mealArray.joined(separator: ",")
-//    }
-//}
+extension SearchRecipeViewController: PassingDataDelegateProtocol{
+    ///func to update parameters for call network
+    func updateData(for dietArray: [String], intoleranceArray: [String], cuisineArray: [String], mealArray: [String]) {
+        diet = dietArray.joined(separator: ",")
+        intolerance = intoleranceArray.joined(separator: ",")
+        typeOfCuisine = cuisineArray.joined(separator: ",")
+        typeOfMeal = mealArray.joined(separator: ",")
+    }
+}
 
 //MARK: - Alerte
 extension SearchRecipeViewController {
@@ -180,9 +179,9 @@ extension SearchRecipeViewController {
         private func activityIndicatorAlerte() -> UIAlertController {
             let alert = UIAlertController(title: "Recherche en cours", message: "Merci de patienter...\n\n\n", preferredStyle: .alert)
             let activityIndicator = UIActivityIndicatorView()
-//            alert.setBackgroundColor(color: #colorLiteral(red: 0.9633114934, green: 0.9485848546, blue: 0.8967990279, alpha: 1))
-//            alert.setTitlet(color: #colorLiteral(red: 0.643104732, green: 0.2448115349, blue: 0.1737442911, alpha: 1))
-//            alert.setMessage(color: #colorLiteral(red: 0.643104732, green: 0.2448115349, blue: 0.1737442911, alpha: 1))
+            alert.setBackgroundColor(color: #colorLiteral(red: 0.9633114934, green: 0.9485848546, blue: 0.8967990279, alpha: 1))
+            alert.setTitlet(color: #colorLiteral(red: 0.643104732, green: 0.2448115349, blue: 0.1737442911, alpha: 1))
+            alert.setMessage(color: #colorLiteral(red: 0.643104732, green: 0.2448115349, blue: 0.1737442911, alpha: 1))
             activityIndicator.color = #colorLiteral(red: 0.95542413, green: 0.6744924188, blue: 0.4416911602, alpha: 1)
             activityIndicator.startAnimating()
             alert.view.addSubview(activityIndicator)

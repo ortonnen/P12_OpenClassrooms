@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		812592292646DCE9002B72EC /* MoreInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812592282646DCE9002B72EC /* MoreInformationViewController.swift */; };
 		8125922B2646DDB7002B72EC /* FilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8125922A2646DDB7002B72EC /* FilterTableViewCell.swift */; };
+		8125922D2647DBCD002B72EC /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8125922C2647DBCD002B72EC /* AlertViewController.swift */; };
+		812592302647DBF3002B72EC /* PassingDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8125922F2647DBF3002B72EC /* PassingDataProtocol.swift */; };
 		8128DC162645C27100CC884A /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8128DC152645C27100CC884A /* RoundButton.swift */; };
 		8128DC182645C3A100CC884A /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8128DC172645C3A100CC884A /* MenuViewController.swift */; };
 		8128DC1B2645C66000CC884A /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8128DC1A2645C66000CC884A /* RecipeViewController.swift */; };
@@ -47,6 +49,8 @@
 		6F1A19B694D4FD4E0B02744F /* Pods-WaWe-WaWeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaWe-WaWeTests.release.xcconfig"; path = "Target Support Files/Pods-WaWe-WaWeTests/Pods-WaWe-WaWeTests.release.xcconfig"; sourceTree = "<group>"; };
 		812592282646DCE9002B72EC /* MoreInformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreInformationViewController.swift; sourceTree = "<group>"; };
 		8125922A2646DDB7002B72EC /* FilterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterTableViewCell.swift; sourceTree = "<group>"; };
+		8125922C2647DBCD002B72EC /* AlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
+		8125922F2647DBF3002B72EC /* PassingDataProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassingDataProtocol.swift; sourceTree = "<group>"; };
 		8128DC152645C27100CC884A /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		8128DC172645C3A100CC884A /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		8128DC1A2645C66000CC884A /* RecipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
@@ -105,9 +109,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8125922E2647DBE3002B72EC /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				8125922F2647DBF3002B72EC /* PassingDataProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
 		8128DC132645C22200CC884A /* Custom */ = {
 			isa = PBXGroup;
 			children = (
+				8125922C2647DBCD002B72EC /* AlertViewController.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -202,6 +215,7 @@
 		812A418F264480380075B756 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				8125922E2647DBE3002B72EC /* Protocol */,
 				8128DC1F2645D07800CC884A /* Search Recipe */,
 				8128DC192645C63100CC884A /* Recipe */,
 				812A419F264485870075B756 /* TabBarViewController.swift */,
@@ -466,7 +480,9 @@
 				812A416826443FA60075B756 /* AppDelegate.swift in Sources */,
 				8128DC1B2645C66000CC884A /* RecipeViewController.swift in Sources */,
 				8128DC182645C3A100CC884A /* MenuViewController.swift in Sources */,
+				812592302647DBF3002B72EC /* PassingDataProtocol.swift in Sources */,
 				81CB69382644892700F8F0BF /* RecipeServices.swift in Sources */,
+				8125922D2647DBCD002B72EC /* AlertViewController.swift in Sources */,
 				81CB693A2644892700F8F0BF /* Spoonacular.swift in Sources */,
 				8125922B2646DDB7002B72EC /* FilterTableViewCell.swift in Sources */,
 				812A41A4264485D90075B756 /* RealmDataManager.swift in Sources */,

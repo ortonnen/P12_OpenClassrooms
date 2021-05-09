@@ -20,7 +20,7 @@ class MoreInformationViewController: UIViewController {
     var typeOfIntolerancesSelected = [String]()
     var typeOfMealSelected = [String]()
     
-//    weak var delegate: PassingDataDelegateProtocol?
+    weak var delegate: PassingDataDelegateProtocol?
     
     //MARK: Outlet
     @IBOutlet weak var typeOfCuisinesTableView: UITableView!
@@ -52,7 +52,7 @@ class MoreInformationViewController: UIViewController {
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(true)
-//        delegate?.updateData(for: typeOfDietSelected, intoleranceArray: typeOfIntolerancesSelected, cuisineArray: typeOfCuisineSelected, mealArray: typeOfMealSelected)
+        delegate?.updateData(for: typeOfDietSelected, intoleranceArray: typeOfIntolerancesSelected, cuisineArray: typeOfCuisineSelected, mealArray: typeOfMealSelected)
     }
     
     //MARK: Actions
