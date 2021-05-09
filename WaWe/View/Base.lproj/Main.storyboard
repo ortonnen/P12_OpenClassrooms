@@ -180,28 +180,28 @@
             </objects>
             <point key="canvasLocation" x="851" y="421"/>
         </scene>
-        <!--View Controller-->
+        <!--Instructions View Controller-->
         <scene sceneID="8Be-sQ-A2z">
             <objects>
-                <viewController id="T0b-0w-3y0" sceneMemberID="viewController">
+                <viewController id="T0b-0w-3y0" customClass="InstructionsViewController" customModule="WaWe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jEQ-Mf-GMs">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="highlighted" highlightedImage="highlighted" translatesAutoresizingMaskIntoConstraints="NO" id="bv5-LO-P7S">
-                                <rect key="frame" x="0.0" y="88" width="428" height="240"/>
+                                <rect key="frame" x="0.0" y="88" width="428" height="200"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="240" id="Dkq-Sb-eln"/>
+                                    <constraint firstAttribute="height" constant="200" id="Dkq-Sb-eln"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FoO-DA-gu6">
-                                <rect key="frame" x="0.0" y="88" width="428" height="240"/>
+                                <rect key="frame" x="0.0" y="88" width="428" height="200"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="24"/>
                                 <color key="textColor" red="0.59607845540000004" green="0.270588249" blue="0.20000001789999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="PxF-gx-pyv" userLabel="Time and ServingcStack View">
-                                <rect key="frame" x="4" y="336" width="420" height="47.333333333333314"/>
+                                <rect key="frame" x="4" y="296" width="420" height="47.333333333333314"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Vzc-h1-54q" userLabel="Time Stack View">
                                         <rect key="frame" x="0.0" y="0.0" width="204" height="47.333333333333336"/>
@@ -240,20 +240,20 @@
                                 </subviews>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1fD-il-MZU">
-                                <rect key="frame" x="4" y="395.33333333333331" width="420" height="158.99999999999994"/>
+                                <rect key="frame" x="4" y="355.33333333333331" width="420" height="158.99999999999994"/>
                                 <color key="backgroundColor" red="0.96078431610000004" green="0.94901961089999998" blue="0.90196073060000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="159" id="6na-Qu-Ux8"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="36" id="9hj-Lf-7C5" customClass="IngredientTableViewCell" customModule="WaWe" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ingredientListRecipeCell" rowHeight="36" id="9hj-Lf-7C5" customClass="IngredientTableViewCell" customModule="WaWe" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="24.333333969116211" width="420" height="36"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9hj-Lf-7C5" id="b7s-0g-aqd">
                                             <rect key="frame" x="0.0" y="0.0" width="420" height="36"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="EDI-TG-U6C" userLabel="Ingredient Stack View">
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="EDI-TG-U6C" userLabel="Ingredient Stack View">
                                                     <rect key="frame" x="0.0" y="0.0" width="420" height="36"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingrédient" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ohz-Bk-d9F">
@@ -285,6 +285,11 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.96078431610000004" green="0.94901961089999998" blue="0.90196073060000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <outlet property="ingredientLabel" destination="ohz-Bk-d9F" id="XeJ-Yx-R2C"/>
+                                            <outlet property="quantityLabel" destination="Swn-5L-wvS" id="APC-oX-ePA"/>
+                                            <outlet property="unitLabel" destination="Tjs-F1-jmU" id="4ea-ck-HGT"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -296,7 +301,7 @@
                                 </state>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Instructions" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="s1p-EY-Jq9">
-                                <rect key="frame" x="4" y="558.33333333333337" width="420" height="230.66666666666663"/>
+                                <rect key="frame" x="4" y="518.33333333333337" width="420" height="270.66666666666663"/>
                                 <color key="backgroundColor" red="0.96078431610000004" green="0.94901961089999998" blue="0.90196073060000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="textColor" red="0.59607845540000004" green="0.270588249" blue="0.20000001789999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="16"/>
@@ -337,9 +342,21 @@
                                 <state key="normal" title="Ajouter aux favoris">
                                     <color key="titleColor" red="0.59607845540000004" green="0.270588249" blue="0.20000001789999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <action selector="tappedOnItemBarButton:" destination="T0b-0w-3y0" eventType="touchUpInside" id="Pdi-Bg-Ohn"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="ingredientInformationTableView" destination="1fD-il-MZU" id="BRH-Pn-fy7"/>
+                        <outlet property="instructionTextView" destination="s1p-EY-Jq9" id="pOQ-L8-ubC"/>
+                        <outlet property="itemBarButton" destination="ztg-dZ-PGR" id="TLw-uS-bjs"/>
+                        <outlet property="recipeImageView" destination="bv5-LO-P7S" id="vD1-r2-QYX"/>
+                        <outlet property="recipeTitleLabel" destination="FoO-DA-gu6" id="Wqw-LS-mGE"/>
+                        <outlet property="servingLabel" destination="d1U-Ai-l7h" id="5Ij-bq-b7f"/>
+                        <outlet property="timeLabel" destination="bTM-yD-1od" id="K53-Sf-fa7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NJ8-93-5Ay" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

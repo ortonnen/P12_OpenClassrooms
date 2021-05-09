@@ -34,10 +34,10 @@ class RecipeViewController: UIViewController {
         recipeTableView.reloadData()
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if let instructionVC = segue.destination as? InstructionsViewController {
-//            guard let indexPath = recipeTableView.indexPathForSelectedRow else {return}
-//            instructionVC.recipe = recipes[indexPath.row]
-//        }
+        if let instructionVC = segue.destination as? InstructionsViewController {
+            guard let indexPath = recipeTableView.indexPathForSelectedRow else {return}
+            instructionVC.recipe = recipes[indexPath.row]
+        }
     }
     
     //MARK: File Private Methods
