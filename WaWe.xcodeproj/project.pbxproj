@@ -11,6 +11,7 @@
 		8125922B2646DDB7002B72EC /* FilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8125922A2646DDB7002B72EC /* FilterTableViewCell.swift */; };
 		8125922D2647DBCD002B72EC /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8125922C2647DBCD002B72EC /* AlertViewController.swift */; };
 		812592302647DBF3002B72EC /* PassingDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8125922F2647DBF3002B72EC /* PassingDataProtocol.swift */; };
+		812592322647E4C4002B72EC /* IngredientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812592312647E4C4002B72EC /* IngredientTableViewCell.swift */; };
 		8128DC162645C27100CC884A /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8128DC152645C27100CC884A /* RoundButton.swift */; };
 		8128DC182645C3A100CC884A /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8128DC172645C3A100CC884A /* MenuViewController.swift */; };
 		8128DC1B2645C66000CC884A /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8128DC1A2645C66000CC884A /* RecipeViewController.swift */; };
@@ -51,6 +52,7 @@
 		8125922A2646DDB7002B72EC /* FilterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterTableViewCell.swift; sourceTree = "<group>"; };
 		8125922C2647DBCD002B72EC /* AlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		8125922F2647DBF3002B72EC /* PassingDataProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassingDataProtocol.swift; sourceTree = "<group>"; };
+		812592312647E4C4002B72EC /* IngredientTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientTableViewCell.swift; sourceTree = "<group>"; };
 		8128DC152645C27100CC884A /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		8128DC172645C3A100CC884A /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		8128DC1A2645C66000CC884A /* RecipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 		8128DC1C2645C6D600CC884A /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				812592312647E4C4002B72EC /* IngredientTableViewCell.swift */,
 				8125922A2646DDB7002B72EC /* FilterTableViewCell.swift */,
 				8128DC1D2645C6F600CC884A /* RecipeTableView.swift */,
 			);
@@ -477,6 +480,7 @@
 				812592292646DCE9002B72EC /* MoreInformationViewController.swift in Sources */,
 				8128DC212645D09300CC884A /* SearchRecipeViewController.swift in Sources */,
 				81CB693F264489F800F8F0BF /* TranslateServices.swift in Sources */,
+				812592322647E4C4002B72EC /* IngredientTableViewCell.swift in Sources */,
 				812A416826443FA60075B756 /* AppDelegate.swift in Sources */,
 				8128DC1B2645C66000CC884A /* RecipeViewController.swift in Sources */,
 				8128DC182645C3A100CC884A /* MenuViewController.swift in Sources */,
