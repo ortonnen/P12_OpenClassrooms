@@ -464,10 +464,10 @@
             </objects>
             <point key="canvasLocation" x="2897.663551401869" y="-316.19870410367173"/>
         </scene>
-        <!--Instructions View Controller-->
+        <!--Add Instruction View Controller-->
         <scene sceneID="ULE-sp-Bmq">
             <objects>
-                <viewController id="guK-ik-uav" customClass="InstructionsViewController" customModule="WaWe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="guK-ik-uav" customClass="AddInstructionViewController" customModule="WaWe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5SI-HD-1QH">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -490,6 +490,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="tappedAddInstructionButton:" destination="guK-ik-uav" eventType="touchUpInside" id="F4R-Kw-Rg5"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="NYu-lA-jc4">
                                 <rect key="frame" x="20" y="50" width="388" height="754"/>
@@ -513,6 +516,9 @@
                             <constraint firstItem="3Tt-fC-o1X" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="hSg-dv-Sug" secondAttribute="trailing" symbolic="YES" id="vYM-Js-o7j"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="instructionTV" destination="NYu-lA-jc4" id="ESc-VH-pAc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PER-3b-pdS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
