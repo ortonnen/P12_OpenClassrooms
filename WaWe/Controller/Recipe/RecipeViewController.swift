@@ -21,6 +21,7 @@ class RecipeViewController: UIViewController {
     //MARK: Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        recipeTableView.reloadData()
         recipeTableView.delegate = self
         recipeTableView.dataSource = self
         recipeTableView.rowHeight = 140
@@ -28,6 +29,7 @@ class RecipeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         updateRecipeArray()
+        
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
@@ -51,32 +53,39 @@ class RecipeViewController: UIViewController {
                     let newRecipe = realmDataManager.mapCreatedRecipeToRecipe(for: createRecipe)
                     recipes.append(newRecipe)
                 }
+            } else if recipe.isFavorite == true {
+                recipes.removeAll()
+                guard let favoriteRecipes = realm?.objects(FavoriteRecipe.self) else {return}
+                for favoriteRecipe in favoriteRecipes {
+                    let newRecipe = realmDataManager.mapFavoriteRecipeToRecipe(for: favoriteRecipe)
+                    recipes.append(newRecipe)
+                }
             }
         }
     }
 }
-
-//MARK: - TableView
-extension RecipeViewController: UITableViewDelegate{
     
-}
-extension RecipeViewController: UITableViewDataSource{
-    /// func to return number of Rows section for table View
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return recipes.count
+    //MARK: - TableView
+    extension RecipeViewController: UITableViewDelegate{
+        
     }
-    ///func to configure cell
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "recipeCell", for: indexPath) as? RecipesTableViewCell else {
-            return UITableViewCell()
+    extension RecipeViewController: UITableViewDataSource{
+        /// func to return number of Rows section for table View
+        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+            return recipes.count
         }
-        guard recipes.count > 0 else {
-            cell.configure(withTitle: "Aucune recette", imageUrl: nil, imageData: nil)
+        ///func to configure cell
+        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "recipeCell", for: indexPath) as? RecipesTableViewCell else {
+                return UITableViewCell()
+            }
+            guard recipes.count > 0 else {
+                cell.configure(withTitle: "Aucune recette", imageUrl: nil, imageData: nil)
+                return cell
+            }
+            
+            cell.configure(withTitle: recipes[indexPath.row].title, imageUrl: recipes[indexPath.row].imageString ?? nil, imageData: recipes[indexPath.row].imageData ?? nil )
             return cell
         }
-        
-        cell.configure(withTitle: recipes[indexPath.row].title, imageUrl: recipes[indexPath.row].imageString ?? nil, imageData: recipes[indexPath.row].imageData ?? nil )
-        return cell
     }
-}
 

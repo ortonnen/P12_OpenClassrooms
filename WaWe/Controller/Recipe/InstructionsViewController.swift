@@ -46,6 +46,9 @@ class InstructionsViewController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        if checkIfRecipeIsFavorite() == true {
+            itemBarButton.setTitle("retirer des favoris", for: .normal)
+        }
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
@@ -61,8 +64,6 @@ class InstructionsViewController: UIViewController {
     
     //MARK: Action
     @IBAction func tappedOnItemBarButton(_ sender: Any) {
-        //FIXME: Add if recipe search.title = favoriteRecipe.title button text = retirer des fav
-        
         if checkIfRecipeIsCreate() == true {
             deleteRecipeCreated()
             self.navigationController?.popViewController(animated: true)
@@ -75,9 +76,6 @@ class InstructionsViewController: UIViewController {
             recipe.isFavorite = true
             itemBarButton.setTitle("retirer des favoris", for: .normal)
         }
-    }
-    @IBAction func tappedOnDeleteFavoriteButton(_ sender: Any) {
-        deleteFavoriteRecipe()
     }
     
     //MARK: File Private Methods
@@ -203,8 +201,11 @@ class InstructionsViewController: UIViewController {
     }
     ///method to check if Recipe is favorite
     fileprivate func checkIfRecipeIsFavorite()-> Bool? {
-        if recipe.isFavorite == true {
-            return true
+        for favoriteRecipe in favoriteRecipeList {
+            if favoriteRecipe.title == recipe.title {
+                recipe.isFavorite = true
+                return true
+            }
         }
         return false
     }
@@ -227,9 +228,7 @@ class InstructionsViewController: UIViewController {
             for favoriteRecipe in favoriteRecipeList {
                 if recipe.title == favoriteRecipe.title {
                     realm?.delete(favoriteRecipe)
-                    dismissAlerte("Favoris", "La recette a été correctement retirée des favoris", "ok"){
-                        self.dismiss(animated: true, completion: nil)
-                    }
+                    dismissAlerte("Favoris", "La recette a été correctement retirée des favoris", "ok", completion: nil)
                 }
             }
         })
@@ -295,9 +294,10 @@ extension InstructionsViewController{
     ///user Alerte to dismiss View Controller
     private func dismissAlerte(_ title: String, _ message: String, _ buttonTitle: String, completion:(()->Void)?){
         let alerte = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let alerteAction = UIAlertAction(title: buttonTitle, style: .cancel, handler: nil)
+        let alerteAction = UIAlertAction(title: buttonTitle, style: .cancel){_ in
+            self.navigationController?.popViewController(animated: true)
+        }
         alerte.addAction(alerteAction)
-        self.navigationController?.popViewController(animated: true)
         self.present(alerte, animated: true, completion: nil)
     }
     ///activity Indicator alerte present during the network call

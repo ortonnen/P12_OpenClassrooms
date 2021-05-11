@@ -30,6 +30,7 @@
 		812A41A0264485870075B756 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812A419F264485870075B756 /* TabBarViewController.swift */; };
 		812A41A4264485D90075B756 /* RealmDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812A41A2264485D90075B756 /* RealmDataManager.swift */; };
 		812A41A5264485D90075B756 /* Recipes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812A41A3264485D90075B756 /* Recipes.swift */; };
+		813ADB3E264B14E600386700 /* NavigationFavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813ADB3D264B14E600386700 /* NavigationFavoriteViewController.swift */; };
 		81CB69382644892700F8F0BF /* RecipeServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CB69352644892700F8F0BF /* RecipeServices.swift */; };
 		81CB69392644892700F8F0BF /* ParametersSupportedBySpoonacular.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CB69362644892700F8F0BF /* ParametersSupportedBySpoonacular.swift */; };
 		81CB693A2644892700F8F0BF /* Spoonacular.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CB69372644892700F8F0BF /* Spoonacular.swift */; };
@@ -80,6 +81,7 @@
 		812A419F264485870075B756 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		812A41A2264485D90075B756 /* RealmDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmDataManager.swift; sourceTree = "<group>"; };
 		812A41A3264485D90075B756 /* Recipes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recipes.swift; sourceTree = "<group>"; };
+		813ADB3D264B14E600386700 /* NavigationFavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationFavoriteViewController.swift; sourceTree = "<group>"; };
 		81CB69352644892700F8F0BF /* RecipeServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeServices.swift; sourceTree = "<group>"; };
 		81CB69362644892700F8F0BF /* ParametersSupportedBySpoonacular.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParametersSupportedBySpoonacular.swift; sourceTree = "<group>"; };
 		81CB69372644892700F8F0BF /* Spoonacular.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spoonacular.swift; sourceTree = "<group>"; };
@@ -253,6 +255,7 @@
 				8128DC1F2645D07800CC884A /* Search Recipe */,
 				8128DC192645C63100CC884A /* Recipe */,
 				812A419F264485870075B756 /* TabBarViewController.swift */,
+				813ADB3D264B14E600386700 /* NavigationFavoriteViewController.swift */,
 				8128DC172645C3A100CC884A /* MenuViewController.swift */,
 				8128DC132645C22200CC884A /* Custom */,
 			);
@@ -520,6 +523,7 @@
 				8128DC1B2645C66000CC884A /* RecipeViewController.swift in Sources */,
 				812592342647E55F002B72EC /* InstructionsViewController.swift in Sources */,
 				8128DC182645C3A100CC884A /* MenuViewController.swift in Sources */,
+				813ADB3E264B14E600386700 /* NavigationFavoriteViewController.swift in Sources */,
 				812592302647DBF3002B72EC /* PassingDataProtocol.swift in Sources */,
 				81CB69382644892700F8F0BF /* RecipeServices.swift in Sources */,
 				8125922D2647DBCD002B72EC /* AlertViewController.swift in Sources */,

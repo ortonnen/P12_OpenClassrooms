@@ -30,6 +30,7 @@ class CreateARecipeViewController: UIViewController {
     @IBOutlet weak var ingredientInformationTableView: UITableView!
     @IBOutlet weak var addImageButton: UIButton!
     
+   
     //MARK: Methods override
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +48,10 @@ class CreateARecipeViewController: UIViewController {
     
     //MARK: Action
     @IBAction func tappedSaveRecipeButton(_ sender: Any) {
-        guard let title = titleTextField.text, !title.isEmpty, recipeImage.image != nil, let serving = servingsTextField.text, !serving.isEmpty, currentIngredients.count > 0, !instruction.isEmpty else {
+        guard let title = titleTextField.text, !title.isEmpty else {
+            return alerte("Recette", "Vous ne pouvez pas sauvegarder une recette sans titre", "OK")
+        }
+        guard recipeImage.image != nil, let serving = servingsTextField.text, !serving.isEmpty, currentIngredients.count > 0, !instruction.isEmpty else {
             confirmeSavedRecipe("Créer", "tous les champs de la recettes ne sont pas complet, \n Êtes vous sur de vouloir sauvegarder?", "Valider", "Annuler")
             return
         }
@@ -58,12 +62,13 @@ class CreateARecipeViewController: UIViewController {
         addIngredient()
         ingredientInformationTableView.reloadData()
     }
-    @IBAction func tappedAddInstructionButton(_ sender: Any) {
-    }
     @IBAction func tappedAddImageButton(_ sender: Any) {
         choosePhotoInLibrary()
     }
-    
+    @IBAction func tappedToDeleteIngredient(_ sender: Any) {
+        confirmeDeleteIngredient("Ingrédients", "êtes-vous sûre de vouloirs supprimer la liste d'ingédient? ", "Valider", "Annuler")
+        ingredientInformationTableView.reloadData()
+    }
     //MARK: File private methods
     ///method to choose photo in personnal library
     fileprivate func choosePhotoInLibrary() {
@@ -85,7 +90,7 @@ class CreateARecipeViewController: UIViewController {
     }
     ///method to avoid duplicate ingredients
     fileprivate func checkIfIngredientAlreadyExist(for ingredientName: String, quantity: Float) -> Bool {
-        for currentIngredient in ingredientsList {
+        for currentIngredient in currentIngredients {
             if currentIngredient.name == ingredientName && currentIngredient.ingredientQuantity == quantity {
                 alerte("Ingredient", "vous avez déjà enregistré cet ingredient", "ok")
                 return true
@@ -222,6 +227,19 @@ extension CreateARecipeViewController {
             let quantity = Float(self.quantityTextField.text ?? "0")
            let unit = self.unitTextField.text
             self.updateData(ingredient ?? "Ingredient" , quantity ?? 0, unit ?? "")
+            self.ingredientInformationTableView.reloadData()
+        }
+        let alerteActionRefuse = UIAlertAction(title: secondButtonTitle, style: .destructive, handler: nil)
+        
+        alerte.addAction(alerteActionValidate)
+        alerte.addAction(alerteActionRefuse)
+        self.present(alerte, animated: true, completion: nil)
+    }
+    /// user Alerte with Choice to confirme delete ingredient
+    private func confirmeDeleteIngredient(_ title: String, _ message: String, _ firstButtonTitle: String, _ secondButtonTitle: String) {
+        let alerte = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let alerteActionValidate = UIAlertAction(title: firstButtonTitle, style: .default){_ in
+            self.currentIngredients.removeAll()
             self.ingredientInformationTableView.reloadData()
         }
         let alerteActionRefuse = UIAlertAction(title: secondButtonTitle, style: .destructive, handler: nil)
