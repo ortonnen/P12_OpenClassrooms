@@ -26,11 +26,18 @@
 		812A416F26443FA60075B756 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 812A416D26443FA60075B756 /* Main.storyboard */; };
 		812A417126443FA60075B756 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 812A417026443FA60075B756 /* Assets.xcassets */; };
 		812A417426443FA60075B756 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 812A417226443FA60075B756 /* LaunchScreen.storyboard */; };
-		812A4198264480C00075B756 /* WaWeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812A4197264480C00075B756 /* WaWeTests.swift */; };
 		812A41A0264485870075B756 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812A419F264485870075B756 /* TabBarViewController.swift */; };
 		812A41A4264485D90075B756 /* RealmDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812A41A2264485D90075B756 /* RealmDataManager.swift */; };
 		812A41A5264485D90075B756 /* Recipes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812A41A3264485D90075B756 /* Recipes.swift */; };
 		813ADB3E264B14E600386700 /* NavigationFavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813ADB3D264B14E600386700 /* NavigationFavoriteViewController.swift */; };
+		813ADB42264BBF2B00386700 /* RealmDataBaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813ADB41264BBF2B00386700 /* RealmDataBaseTest.swift */; };
+		813ADB46264BBF6F00386700 /* FakeResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813ADB44264BBF6F00386700 /* FakeResponseData.swift */; };
+		813ADB47264BBF6F00386700 /* URLSessionFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813ADB45264BBF6F00386700 /* URLSessionFake.swift */; };
+		813ADB4C264BBFE500386700 /* RecipeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813ADB49264BBFE500386700 /* RecipeTest.swift */; };
+		813ADB4D264BBFE500386700 /* RecipeInformation.json in Resources */ = {isa = PBXBuildFile; fileRef = 813ADB4A264BBFE500386700 /* RecipeInformation.json */; };
+		813ADB4E264BBFE500386700 /* Recipe.json in Resources */ = {isa = PBXBuildFile; fileRef = 813ADB4B264BBFE500386700 /* Recipe.json */; };
+		813ADB52264BC00B00386700 /* translation.json in Resources */ = {isa = PBXBuildFile; fileRef = 813ADB50264BC00B00386700 /* translation.json */; };
+		813ADB53264BC00B00386700 /* TranslationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813ADB51264BC00B00386700 /* TranslationTest.swift */; };
 		81CB69382644892700F8F0BF /* RecipeServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CB69352644892700F8F0BF /* RecipeServices.swift */; };
 		81CB69392644892700F8F0BF /* ParametersSupportedBySpoonacular.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CB69362644892700F8F0BF /* ParametersSupportedBySpoonacular.swift */; };
 		81CB693A2644892700F8F0BF /* Spoonacular.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CB69372644892700F8F0BF /* Spoonacular.swift */; };
@@ -76,12 +83,20 @@
 		812A417326443FA60075B756 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		812A417526443FA60075B756 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		812A4195264480C00075B756 /* WaWeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WaWeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		812A4197264480C00075B756 /* WaWeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaWeTests.swift; sourceTree = "<group>"; };
 		812A4199264480C00075B756 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		812A419F264485870075B756 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		812A41A2264485D90075B756 /* RealmDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmDataManager.swift; sourceTree = "<group>"; };
 		812A41A3264485D90075B756 /* Recipes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recipes.swift; sourceTree = "<group>"; };
 		813ADB3D264B14E600386700 /* NavigationFavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationFavoriteViewController.swift; sourceTree = "<group>"; };
+		813ADB40264BBF2A00386700 /* WaWeTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WaWeTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		813ADB41264BBF2B00386700 /* RealmDataBaseTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmDataBaseTest.swift; sourceTree = "<group>"; };
+		813ADB44264BBF6F00386700 /* FakeResponseData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeResponseData.swift; sourceTree = "<group>"; };
+		813ADB45264BBF6F00386700 /* URLSessionFake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionFake.swift; sourceTree = "<group>"; };
+		813ADB49264BBFE500386700 /* RecipeTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeTest.swift; sourceTree = "<group>"; };
+		813ADB4A264BBFE500386700 /* RecipeInformation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RecipeInformation.json; sourceTree = "<group>"; };
+		813ADB4B264BBFE500386700 /* Recipe.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Recipe.json; sourceTree = "<group>"; };
+		813ADB50264BC00B00386700 /* translation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = translation.json; sourceTree = "<group>"; };
+		813ADB51264BC00B00386700 /* TranslationTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranslationTest.swift; sourceTree = "<group>"; };
 		81CB69352644892700F8F0BF /* RecipeServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeServices.swift; sourceTree = "<group>"; };
 		81CB69362644892700F8F0BF /* ParametersSupportedBySpoonacular.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParametersSupportedBySpoonacular.swift; sourceTree = "<group>"; };
 		81CB69372644892700F8F0BF /* Spoonacular.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spoonacular.swift; sourceTree = "<group>"; };
@@ -275,7 +290,10 @@
 		812A4196264480C00075B756 /* WaWeTests */ = {
 			isa = PBXGroup;
 			children = (
-				812A4197264480C00075B756 /* WaWeTests.swift */,
+				813ADB4F264BBFF800386700 /* Translation */,
+				813ADB48264BBFC900386700 /* Recipe */,
+				813ADB43264BBF5300386700 /* FakeCallNetwork */,
+				813ADB3F264BBED200386700 /* RealmData */,
 				812A4199264480C00075B756 /* Info.plist */,
 			);
 			path = WaWeTests;
@@ -288,6 +306,43 @@
 				812A41A3264485D90075B756 /* Recipes.swift */,
 			);
 			path = "Realm Data";
+			sourceTree = "<group>";
+		};
+		813ADB3F264BBED200386700 /* RealmData */ = {
+			isa = PBXGroup;
+			children = (
+				813ADB41264BBF2B00386700 /* RealmDataBaseTest.swift */,
+				813ADB40264BBF2A00386700 /* WaWeTests-Bridging-Header.h */,
+			);
+			path = RealmData;
+			sourceTree = "<group>";
+		};
+		813ADB43264BBF5300386700 /* FakeCallNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				813ADB44264BBF6F00386700 /* FakeResponseData.swift */,
+				813ADB45264BBF6F00386700 /* URLSessionFake.swift */,
+			);
+			path = FakeCallNetwork;
+			sourceTree = "<group>";
+		};
+		813ADB48264BBFC900386700 /* Recipe */ = {
+			isa = PBXGroup;
+			children = (
+				813ADB4B264BBFE500386700 /* Recipe.json */,
+				813ADB4A264BBFE500386700 /* RecipeInformation.json */,
+				813ADB49264BBFE500386700 /* RecipeTest.swift */,
+			);
+			path = Recipe;
+			sourceTree = "<group>";
+		};
+		813ADB4F264BBFF800386700 /* Translation */ = {
+			isa = PBXGroup;
+			children = (
+				813ADB50264BC00B00386700 /* translation.json */,
+				813ADB51264BC00B00386700 /* TranslationTest.swift */,
+			);
+			path = Translation;
 			sourceTree = "<group>";
 		};
 		81CB69342644890200F8F0BF /* Recipe API */ = {
@@ -376,6 +431,7 @@
 					};
 					812A4194264480C00075B756 = {
 						CreatedOnToolsVersion = 12.5;
+						LastSwiftMigration = 1250;
 						TestTargetID = 812A416326443FA60075B756;
 					};
 				};
@@ -414,6 +470,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				813ADB4D264BBFE500386700 /* RecipeInformation.json in Resources */,
+				813ADB52264BC00B00386700 /* translation.json in Resources */,
+				813ADB4E264BBFE500386700 /* Recipe.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -538,7 +597,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				812A4198264480C00075B756 /* WaWeTests.swift in Sources */,
+				813ADB42264BBF2B00386700 /* RealmDataBaseTest.swift in Sources */,
+				813ADB47264BBF6F00386700 /* URLSessionFake.swift in Sources */,
+				813ADB46264BBF6F00386700 /* FakeResponseData.swift in Sources */,
+				813ADB53264BC00B00386700 /* TranslationTest.swift in Sources */,
+				813ADB4C264BBFE500386700 /* RecipeTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -735,6 +798,7 @@
 			baseConfigurationReference = A5F705BA82437D327564A031 /* Pods-WaWe-WaWeTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XJPLMV5UNX;
 				INFOPLIST_FILE = WaWeTests/Info.plist;
@@ -745,6 +809,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nathalieOrtonne.WaWeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WaWeTests/RealmData/WaWeTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WaWe.app/WaWe";
@@ -756,6 +822,7 @@
 			baseConfigurationReference = 6F1A19B694D4FD4E0B02744F /* Pods-WaWe-WaWeTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XJPLMV5UNX;
 				INFOPLIST_FILE = WaWeTests/Info.plist;
@@ -766,6 +833,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nathalieOrtonne.WaWeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WaWeTests/RealmData/WaWeTests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WaWe.app/WaWe";

@@ -1,0 +1,713 @@
+{
+    "vegetarian": false,
+    "vegan": false,
+    "glutenFree": false,
+    "dairyFree": false,
+    "veryHealthy": false,
+    "cheap": false,
+    "veryPopular": false,
+    "sustainable": false,
+    "weightWatcherSmartPoints": 9,
+    "gaps": "no",
+    "lowFodmap": false,
+    "aggregateLikes": 1,
+    "spoonacularScore": 38.0,
+    "healthScore": 6.0,
+    "creditsText": "Foodista.com – The Cooking Encyclopedia Everyone Can Edit",
+    "license": "CC BY 3.0",
+    "sourceName": "Foodista",
+    "pricePerServing": 114.46,
+    "extendedIngredients": [
+        {
+            "id": 1001,
+            "aisle": "Milk, Eggs, Other Dairy",
+            "image": "butter-sliced.jpg",
+            "consistency": "solid",
+            "name": "butter",
+            "nameClean": "butter",
+            "original": "1/4 cup soft butter",
+            "originalString": "1/4 cup soft butter",
+            "originalName": "soft butter",
+            "amount": 0.25,
+            "unit": "cup",
+            "meta": [
+                "soft"
+            ],
+            "metaInformation": [
+                "soft"
+            ],
+            "measures": {
+                "us": {
+                    "amount": 0.25,
+                    "unitShort": "cups",
+                    "unitLong": "cups"
+                },
+                "metric": {
+                    "amount": 59.147,
+                    "unitShort": "ml",
+                    "unitLong": "milliliters"
+                }
+            }
+        },
+        {
+            "id": 1123,
+            "aisle": "Milk, Eggs, Other Dairy",
+            "image": "egg.png",
+            "consistency": "solid",
+            "name": "eggs",
+            "nameClean": "egg",
+            "original": "2 large eggs, separated from yolk from whites",
+            "originalString": "2 large eggs, separated from yolk from whites",
+            "originalName": "eggs, separated from yolk from whites",
+            "amount": 2.0,
+            "unit": "large",
+            "meta": [
+                "separated"
+            ],
+            "metaInformation": [
+                "separated"
+            ],
+            "measures": {
+                "us": {
+                    "amount": 2.0,
+                    "unitShort": "large",
+                    "unitLong": "larges"
+                },
+                "metric": {
+                    "amount": 2.0,
+                    "unitShort": "large",
+                    "unitLong": "larges"
+                }
+            }
+        },
+        {
+            "id": 2044,
+            "aisle": "Produce;Spices and Seasonings",
+            "image": "basil.jpg",
+            "consistency": "solid",
+            "name": "fresh basil",
+            "nameClean": "basil",
+            "original": "3 tablespoons fresh basil, chopped",
+            "originalString": "3 tablespoons fresh basil, chopped",
+            "originalName": "fresh basil, chopped",
+            "amount": 3.0,
+            "unit": "tablespoons",
+            "meta": [
+                "fresh",
+                "chopped"
+            ],
+            "metaInformation": [
+                "fresh",
+                "chopped"
+            ],
+            "measures": {
+                "us": {
+                    "amount": 3.0,
+                    "unitShort": "Tbsps",
+                    "unitLong": "Tbsps"
+                },
+                "metric": {
+                    "amount": 3.0,
+                    "unitShort": "Tbsps",
+                    "unitLong": "Tbsps"
+                }
+            }
+        },
+        {
+            "id": 1159,
+            "aisle": "Cheese",
+            "image": "goat-cheese.jpg",
+            "consistency": "solid",
+            "name": "goat cheese",
+            "nameClean": "goat cheese",
+            "original": "1/4 cup goat cheese",
+            "originalString": "1/4 cup goat cheese",
+            "originalName": "goat cheese",
+            "amount": 0.25,
+            "unit": "cup",
+            "meta": [],
+            "metaInformation": [],
+            "measures": {
+                "us": {
+                    "amount": 0.25,
+                    "unitShort": "cups",
+                    "unitLong": "cups"
+                },
+                "metric": {
+                    "amount": 59.147,
+                    "unitShort": "ml",
+                    "unitLong": "milliliters"
+                }
+            }
+        },
+        {
+            "id": 1002030,
+            "aisle": "Spices and Seasonings",
+            "image": "pepper.jpg",
+            "consistency": "solid",
+            "name": "ground pepper",
+            "nameClean": "ground black pepper",
+            "original": "1 1/2 tsp ground black pepper, divided",
+            "originalString": "1 1/2 tsp ground black pepper, divided",
+            "originalName": "ground black pepper, divided",
+            "amount": 1.5,
+            "unit": "tsp",
+            "meta": [
+                "black",
+                "divided"
+            ],
+            "metaInformation": [
+                "black",
+                "divided"
+            ],
+            "measures": {
+                "us": {
+                    "amount": 1.5,
+                    "unitShort": "tsps",
+                    "unitLong": "teaspoons"
+                },
+                "metric": {
+                    "amount": 1.5,
+                    "unitShort": "tsps",
+                    "unitLong": "teaspoons"
+                }
+            }
+        },
+        {
+            "id": 4641,
+            "aisle": "Condiments",
+            "image": "mayonnaise.png",
+            "consistency": "liquid",
+            "name": "low fat mayonnaise",
+            "nameClean": "light mayonnaise",
+            "original": "1/3 cup mayonnaise (I used low fat)",
+            "originalString": "1/3 cup mayonnaise (I used low fat)",
+            "originalName": "mayonnaise (I used low fat)",
+            "amount": 0.3333333333333333,
+            "unit": "cup",
+            "meta": [
+                "low fat",
+                "(I used )"
+            ],
+            "metaInformation": [
+                "low fat",
+                "(I used )"
+            ],
+            "measures": {
+                "us": {
+                    "amount": 0.333,
+                    "unitShort": "cups",
+                    "unitLong": "cups"
+                },
+                "metric": {
+                    "amount": 78.863,
+                    "unitShort": "ml",
+                    "unitLong": "milliliters"
+                }
+            }
+        },
+        {
+            "id": 1033,
+            "aisle": "Cheese",
+            "image": "parmesan.jpg",
+            "consistency": "solid",
+            "name": "parmesan cheese",
+            "nameClean": "parmesan",
+            "original": "1/4 cup Parmesan cheese",
+            "originalString": "1/4 cup Parmesan cheese",
+            "originalName": "Parmesan cheese",
+            "amount": 0.25,
+            "unit": "cup",
+            "meta": [],
+            "metaInformation": [],
+            "measures": {
+                "us": {
+                    "amount": 0.25,
+                    "unitShort": "cups",
+                    "unitLong": "cups"
+                },
+                "metric": {
+                    "amount": 59.147,
+                    "unitShort": "ml",
+                    "unitLong": "milliliters"
+                }
+            }
+        },
+        {
+            "id": 2047,
+            "aisle": "Spices and Seasonings",
+            "image": "salt.jpg",
+            "consistency": "solid",
+            "name": "salt",
+            "nameClean": "salt",
+            "original": "1 1/2 tsp salt",
+            "originalString": "1 1/2 tsp salt",
+            "originalName": "salt",
+            "amount": 1.5,
+            "unit": "tsp",
+            "meta": [],
+            "metaInformation": [],
+            "measures": {
+                "us": {
+                    "amount": 1.5,
+                    "unitShort": "tsps",
+                    "unitLong": "teaspoons"
+                },
+                "metric": {
+                    "amount": 1.5,
+                    "unitShort": "tsps",
+                    "unitLong": "teaspoons"
+                }
+            }
+        },
+        {
+            "id": 11529,
+            "aisle": "Produce",
+            "image": "tomato.png",
+            "consistency": "solid",
+            "name": "tomatoes",
+            "nameClean": "tomato",
+            "original": "5 tomatoes, sliced",
+            "originalString": "5 tomatoes, sliced",
+            "originalName": "tomatoes, sliced",
+            "amount": 5.0,
+            "unit": "",
+            "meta": [
+                "sliced"
+            ],
+            "metaInformation": [
+                "sliced"
+            ],
+            "measures": {
+                "us": {
+                    "amount": 5.0,
+                    "unitShort": "",
+                    "unitLong": ""
+                },
+                "metric": {
+                    "amount": 5.0,
+                    "unitShort": "",
+                    "unitLong": ""
+                }
+            }
+        },
+        {
+            "id": 14412,
+            "aisle": "Beverages",
+            "image": "water.png",
+            "consistency": "liquid",
+            "name": "water",
+            "nameClean": "water",
+            "original": "2-3 tablespoons water",
+            "originalString": "2-3 tablespoons water",
+            "originalName": "water",
+            "amount": 2.0,
+            "unit": "tablespoons",
+            "meta": [],
+            "metaInformation": [],
+            "measures": {
+                "us": {
+                    "amount": 2.0,
+                    "unitShort": "Tbsps",
+                    "unitLong": "Tbsps"
+                },
+                "metric": {
+                    "amount": 2.0,
+                    "unitShort": "Tbsps",
+                    "unitLong": "Tbsps"
+                }
+            }
+        },
+        {
+            "id": 20081,
+            "aisle": "Baking",
+            "image": "flour.png",
+            "consistency": "solid",
+            "name": "white flour",
+            "nameClean": "wheat flour",
+            "original": "1 1/2 cups all-purpose flour (I used white spelt)",
+            "originalString": "1 1/2 cups all-purpose flour (I used white spelt)",
+            "originalName": "all-purpose flour (I used white spelt)",
+            "amount": 1.5,
+            "unit": "cups",
+            "meta": [
+                "white",
+                "all-purpose",
+                "(I used spelt)"
+            ],
+            "metaInformation": [
+                "white",
+                "all-purpose",
+                "(I used spelt)"
+            ],
+            "measures": {
+                "us": {
+                    "amount": 1.5,
+                    "unitShort": "cups",
+                    "unitLong": "cups"
+                },
+                "metric": {
+                    "amount": 354.882,
+                    "unitShort": "ml",
+                    "unitLong": "milliliters"
+                }
+            }
+        },
+        {
+            "id": 11477,
+            "aisle": "Produce",
+            "image": "zucchini.jpg",
+            "consistency": "solid",
+            "name": "zucchini",
+            "nameClean": "zucchini",
+            "original": "1 zucchini, thinly sliced",
+            "originalString": "1 zucchini, thinly sliced",
+            "originalName": "zucchini, thinly sliced",
+            "amount": 1.0,
+            "unit": "",
+            "meta": [
+                "thinly sliced"
+            ],
+            "metaInformation": [
+                "thinly sliced"
+            ],
+            "measures": {
+                "us": {
+                    "amount": 1.0,
+                    "unitShort": "",
+                    "unitLong": ""
+                },
+                "metric": {
+                    "amount": 1.0,
+                    "unitShort": "",
+                    "unitLong": ""
+                }
+            }
+        }
+    ],
+    "id": 663659,
+    "title": "Tomato-Zucchini Pie",
+    "readyInMinutes": 45,
+    "servings": 6,
+    "sourceUrl": "http://www.foodista.com/recipe/PT8QHGTR/tomato-zucchini-pie",
+    "image": "https://spoonacular.com/recipeImages/663659-556x370.jpg",
+    "imageType": "jpg",
+    "summary": "One serving contains <b>299 calories</b>, <b>10g of protein</b>, and <b>16g of fat</b>. For <b>$1.12 per serving</b>, this recipe <b>covers 13%</b> of your daily requirements of vitamins and minerals. This recipe from Foodista has 1 fans. If you have tomatoes, eggs, zucchini, and a few other ingredients on hand, you can make it. From preparation to the plate, this recipe takes around <b>45 minutes</b>. All things considered, we decided this recipe <b>deserves a spoonacular score of 41%</b>. This score is good. Try <a href=\"https://spoonacular.com/recipes/sandys-tomato-pie-914569\">Sandy’s Tomato Pie</a>, <a href=\"https://spoonacular.com/recipes/zucchini-e-pomodori-gratinati-zucchini-and-tomato-gratin-450527\">Zucchini e Pomodori Gratinati (Zucchini and Tomato Gratin)</a>, and <a href=\"https://spoonacular.com/recipes/zucchini-tomato-pie-470321\">Zucchini Tomato Pie</a> for similar recipes.",
+    "cuisines": [],
+    "dishTypes": [
+        "side dish"
+    ],
+    "diets": [],
+    "occasions": [],
+    "winePairing": {},
+    "instructions": "<ol><li>Combine flour, butter, salt, 1 egg yolk, 2 tablespoons of water and 1 tsp pepper in a mixer. Mix on low until dough sticks together when pressed. Add 1 more tablespoon of water if needed. </li><li>Press dough into a 9-inch square or round pie or tart pan. Pierce dough all over with a fork. </li><li>Brush with 1 egg yolk. Set in freezer 5 minutes. </li><li>If making mini pies, spray small muffin pan with non-stick cooking spray and press dough into each muffin space. Pierce bottom with fork, brush with egg and freeze 5 minutes.</li><li>Preheat oven to 375 degrees F. </li><li>Pour egg whites onto bottom of pie crust and bake crust 15 minutes. Set aside.</li><li>Microwave zucchini 4 minutes or until tender. Drain extra water on paper towels.</li><li>In a separate bowl, combine remaining 1/2 tsp pepper, 1/2 tsp salt, mayonnaise, Parmesan cheese, goat cheese and chopped basil. Layer your pie with zucchini, tomatoes, mayonnaise mixture.</li><li>Bake 25 minutes for large pie and 18-20 minutes for mini pies, or until filling is hot and bubble and crust is golden.</li></ol>",
+    "analyzedInstructions": [
+        {
+            "name": "",
+            "steps": [
+                {
+                    "number": 1,
+                    "step": "Combine flour, butter, salt, 1 egg yolk, 2 tablespoons of water and 1 tsp pepper in a mixer.",
+                    "ingredients": [
+                        {
+                            "id": 1125,
+                            "name": "egg yolk",
+                            "localizedName": "egg yolk",
+                            "image": "egg-yolk.jpg"
+                        },
+                        {
+                            "id": 1001,
+                            "name": "butter",
+                            "localizedName": "butter",
+                            "image": "butter-sliced.jpg"
+                        },
+                        {
+                            "id": 1002030,
+                            "name": "pepper",
+                            "localizedName": "pepper",
+                            "image": "pepper.jpg"
+                        },
+                        {
+                            "id": 20081,
+                            "name": "all purpose flour",
+                            "localizedName": "all purpose flour",
+                            "image": "flour.png"
+                        },
+                        {
+                            "id": 14412,
+                            "name": "water",
+                            "localizedName": "water",
+                            "image": "water.png"
+                        },
+                        {
+                            "id": 2047,
+                            "name": "salt",
+                            "localizedName": "salt",
+                            "image": "salt.jpg"
+                        }
+                    ],
+                    "equipment": [
+                        {
+                            "id": 404726,
+                            "name": "blender",
+                            "localizedName": "blender",
+                            "image": "blender.png"
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "step": "Mix on low until dough sticks together when pressed.",
+                    "ingredients": [
+                        {
+                            "id": 0,
+                            "name": "dough",
+                            "localizedName": "dough",
+                            "image": "pizza-dough"
+                        }
+                    ],
+                    "equipment": []
+                },
+                {
+                    "number": 3,
+                    "step": "Add 1 more tablespoon of water if needed. Press dough into a 9-inch square or round pie or tart pan. Pierce dough all over with a fork.",
+                    "ingredients": [
+                        {
+                            "id": 0,
+                            "name": "dough",
+                            "localizedName": "dough",
+                            "image": "pizza-dough"
+                        },
+                        {
+                            "id": 14412,
+                            "name": "water",
+                            "localizedName": "water",
+                            "image": "water.png"
+                        }
+                    ],
+                    "equipment": [
+                        {
+                            "id": 406922,
+                            "name": "tart form",
+                            "localizedName": "tart form",
+                            "image": "tart-pan.jpg"
+                        }
+                    ]
+                },
+                {
+                    "number": 4,
+                    "step": "Brush with 1 egg yolk. Set in freezer 5 minutes. If making mini pies, spray small muffin pan with non-stick cooking spray and press dough into each muffin space. Pierce bottom with fork, brush with egg and freeze 5 minutes.Preheat oven to 375 degrees F.",
+                    "ingredients": [
+                        {
+                            "id": 4679,
+                            "name": "cooking spray",
+                            "localizedName": "cooking spray",
+                            "image": "cooking-spray.png"
+                        },
+                        {
+                            "id": 1125,
+                            "name": "egg yolk",
+                            "localizedName": "egg yolk",
+                            "image": "egg-yolk.jpg"
+                        },
+                        {
+                            "id": 0,
+                            "name": "dough",
+                            "localizedName": "dough",
+                            "image": "pizza-dough"
+                        },
+                        {
+                            "id": 1123,
+                            "name": "egg",
+                            "localizedName": "egg",
+                            "image": "egg.png"
+                        }
+                    ],
+                    "equipment": [
+                        {
+                            "id": 404671,
+                            "name": "muffin tray",
+                            "localizedName": "muffin tray",
+                            "image": "muffin-tray.jpg"
+                        },
+                        {
+                            "id": 404784,
+                            "name": "oven",
+                            "localizedName": "oven",
+                            "image": "oven.jpg",
+                            "temperature": {
+                                "number": 375.0,
+                                "unit": "Fahrenheit"
+                            }
+                        }
+                    ],
+                    "length": {
+                        "number": 10,
+                        "unit": "minutes"
+                    }
+                },
+                {
+                    "number": 5,
+                    "step": "Pour egg whites onto bottom of pie crust and bake crust 15 minutes. Set aside.Microwave zucchini 4 minutes or until tender.",
+                    "ingredients": [
+                        {
+                            "id": 1124,
+                            "name": "egg whites",
+                            "localizedName": "egg whites",
+                            "image": "egg-white.jpg"
+                        },
+                        {
+                            "id": 18334,
+                            "name": "pie crust",
+                            "localizedName": "pie crust",
+                            "image": "pie-crust.jpg"
+                        },
+                        {
+                            "id": 11477,
+                            "name": "zucchini",
+                            "localizedName": "zucchini",
+                            "image": "zucchini.jpg"
+                        },
+                        {
+                            "id": 0,
+                            "name": "crust",
+                            "localizedName": "crust",
+                            "image": ""
+                        }
+                    ],
+                    "equipment": [
+                        {
+                            "id": 404762,
+                            "name": "microwave",
+                            "localizedName": "microwave",
+                            "image": "microwave.jpg"
+                        },
+                        {
+                            "id": 404784,
+                            "name": "oven",
+                            "localizedName": "oven",
+                            "image": "oven.jpg"
+                        }
+                    ],
+                    "length": {
+                        "number": 19,
+                        "unit": "minutes"
+                    }
+                },
+                {
+                    "number": 6,
+                    "step": "Drain extra water on paper towels.In a separate bowl, combine remaining 1/2 tsp pepper, 1/2 tsp salt, mayonnaise, Parmesan cheese, goat cheese and chopped basil.",
+                    "ingredients": [
+                        {
+                            "id": 1033,
+                            "name": "parmesan",
+                            "localizedName": "parmesan",
+                            "image": "parmesan.jpg"
+                        },
+                        {
+                            "id": 1159,
+                            "name": "goat cheese",
+                            "localizedName": "goat cheese",
+                            "image": "goat-cheese.jpg"
+                        },
+                        {
+                            "id": 4025,
+                            "name": "mayonnaise",
+                            "localizedName": "mayonnaise",
+                            "image": "mayonnaise.png"
+                        },
+                        {
+                            "id": 1002030,
+                            "name": "pepper",
+                            "localizedName": "pepper",
+                            "image": "pepper.jpg"
+                        },
+                        {
+                            "id": 2044,
+                            "name": "basil",
+                            "localizedName": "basil",
+                            "image": "basil.jpg"
+                        },
+                        {
+                            "id": 14412,
+                            "name": "water",
+                            "localizedName": "water",
+                            "image": "water.png"
+                        },
+                        {
+                            "id": 2047,
+                            "name": "salt",
+                            "localizedName": "salt",
+                            "image": "salt.jpg"
+                        }
+                    ],
+                    "equipment": [
+                        {
+                            "id": 405895,
+                            "name": "paper towels",
+                            "localizedName": "paper towels",
+                            "image": "paper-towels.jpg"
+                        },
+                        {
+                            "id": 404783,
+                            "name": "bowl",
+                            "localizedName": "bowl",
+                            "image": "bowl.jpg"
+                        }
+                    ]
+                },
+                {
+                    "number": 7,
+                    "step": "Layer your pie with zucchini, tomatoes, mayonnaise mixture.",
+                    "ingredients": [
+                        {
+                            "id": 4025,
+                            "name": "mayonnaise",
+                            "localizedName": "mayonnaise",
+                            "image": "mayonnaise.png"
+                        },
+                        {
+                            "id": 11529,
+                            "name": "tomato",
+                            "localizedName": "tomato",
+                            "image": "tomato.png"
+                        },
+                        {
+                            "id": 11477,
+                            "name": "zucchini",
+                            "localizedName": "zucchini",
+                            "image": "zucchini.jpg"
+                        }
+                    ],
+                    "equipment": []
+                },
+                {
+                    "number": 8,
+                    "step": "Bake 25 minutes for large pie and 18-20 minutes for mini pies, or until filling is hot and bubble and crust is golden.",
+                    "ingredients": [
+                        {
+                            "id": 0,
+                            "name": "crust",
+                            "localizedName": "crust",
+                            "image": ""
+                        }
+                    ],
+                    "equipment": [
+                        {
+                            "id": 404784,
+                            "name": "oven",
+                            "localizedName": "oven",
+                            "image": "oven.jpg"
+                        }
+                    ],
+                    "length": {
+                        "number": 45,
+                        "unit": "minutes"
+                    }
+                }
+            ]
+        }
+    ],
+    "originalId": null,
+    "spoonacularSourceUrl": "https://spoonacular.com/tomato-zucchini-pie-663659"
+}

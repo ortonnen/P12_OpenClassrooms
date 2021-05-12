@@ -21,7 +21,7 @@ class MenuViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print ( Realm.Configuration .defaultConfiguration.fileURL!)
-        deleteAllData()
+//        deleteAllData()
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
