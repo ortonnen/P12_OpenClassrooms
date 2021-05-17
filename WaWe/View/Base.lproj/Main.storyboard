@@ -527,11 +527,13 @@
             </objects>
             <point key="canvasLocation" x="3867.7570093457944" y="-316.19870410367173"/>
         </scene>
-        <!--Item-->
+        <!--Favoris-->
         <scene sceneID="H2E-u2-wvq">
             <objects>
                 <navigationController id="1Py-sx-aGk" customClass="NavigationFavoriteViewController" customModule="WaWe" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="pkO-Ni-3RA"/>
+                    <tabBarItem key="tabBarItem" title="Favoris" id="pkO-Ni-3RA">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-16"/>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" id="w89-06-6VN"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="mt3-py-aUS">
                         <rect key="frame" x="0.0" y="44" width="428" height="44"/>
