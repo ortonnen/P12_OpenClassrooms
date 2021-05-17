@@ -7,6 +7,8 @@
 
 import UIKit
 import MapKit
+import CoreLocation
+
 
 //MARK: - Map View Controller
 class MapViewController: UIViewController {
@@ -16,7 +18,7 @@ class MapViewController: UIViewController {
     var coordinateInit :  CLLocationCoordinate2D {
         return CLLocationCoordinate2D(latitude: latitudeInit, longitude: longitudeInit)
     }
-    
+    let locationManager = CLLocationManager()
     let regionInMeter: Double = 500
     let searchRequest = MKLocalSearch.Request()
     //MARK: Outlet
@@ -61,11 +63,68 @@ class MapViewController: UIViewController {
             }
         })
     }
+    ///method to center map on user
+    fileprivate func centerViewOnUserLocation() {
+        if let location = locationManager.location?.coordinate {
+            let region = MKCoordinateRegion.init(center: location, latitudinalMeters: regionInMeter, longitudinalMeters: regionInMeter)
+            mapView.setRegion(region, animated: true)
+            searchLocation(for: "organic market")
+            searchLocation(for: "Food market")
+        } else {
+            alerte("Erreur", "Une erreur inconnue est survenue, /n merci de rééssayer plus tard", "Ok")
+        }
+    }
+    ///method to check if user location have authorization
+    fileprivate func checkLocationAuthorization() {
+        switch CLLocationManager.authorizationStatus() {
+        case .authorizedWhenInUse:
+            mapView.showsUserLocation = true
+            centerViewOnUserLocation()
+            locationManager.startUpdatingLocation()
+            searchLocation(for: "organic market")
+            searchLocation(for: "market")
+        case .denied:
+            break
+        case .notDetermined:
+            locationManager.requestWhenInUseAuthorization()
+        case .restricted:
+            break
+        case .authorizedAlways:
+            break
+        @unknown default:
+            break
+        }
+    }
+    ///method to check if location service is enabled
+    fileprivate func checkLocationServices(){
+        if CLLocationManager.locationServicesEnabled() {
+            setupLocationManager()
+            checkLocationAuthorization()
+        } else {
+            let region = MKCoordinateRegion.init(center: coordinateInit, latitudinalMeters: regionInMeter, longitudinalMeters: regionInMeter)
+            mapView.setRegion(region, animated: true)
+        }
+    }
+    fileprivate func setupLocationManager(){
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+    }
+    
+}
+//MARK: - Alerte
+extension MapViewController{
+    /// user Alerte
+    private func alerte(_ title: String, _ message: String, _ buttonTitle: String) {
+        let alerte = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let alerteAction = UIAlertAction(title: buttonTitle, style: .cancel, handler: nil)
+        alerte.addAction(alerteAction)
+        self.present(alerte, animated: true, completion: nil)
+    }
 }
 //MARK: - MapView Delegate
 extension MapViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-   
+        
         guard let title = annotation.title else { return annotation as? MKAnnotationView }
         guard let subtitle = annotation.subtitle else { return annotation as? MKAnnotationView}
         let customAnnotation = AnnotationCustom(title: title ?? "", subtitle: subtitle ?? "", coordinate: annotation.coordinate)
@@ -87,5 +146,15 @@ extension MapViewController: MKMapViewDelegate {
 }
 //MARK: - Location
 extension MapViewController: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let location = locations.last else {return}
+        let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+        let region = MKCoordinateRegion.init(center: center, latitudinalMeters: regionInMeter, longitudinalMeters: regionInMeter)
+        mapView.setRegion(region, animated: true)
+    }
     
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        checkLocationAuthorization()
+    }
 }
+
