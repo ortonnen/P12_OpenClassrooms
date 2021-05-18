@@ -33,6 +33,7 @@ class MapViewController: UIViewController {
         defineInitialLocation()
         searchLocation(for: "food market")
         searchLocation(for: "organic market")
+        checkLocationServices()
     }
     
     //MARK: File Private Methods
