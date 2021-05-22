@@ -1207,10 +1207,10 @@
             </objects>
             <point key="canvasLocation" x="2897.663551401869" y="420.51835853131752"/>
         </scene>
-        <!--Tab Bar View Controller-->
+        <!--Tab Bar Controller-->
         <scene sceneID="V5x-b4-dfr">
             <objects>
-                <tabBarController id="Pav-Lq-M50" customClass="TabBarViewController" customModule="WaWe" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController id="Pav-Lq-M50" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fp0-ak-nAg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

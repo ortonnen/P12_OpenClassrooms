@@ -7,9 +7,10 @@
 
 import UIKit
 
-
-class RoundButton: UIButton {
+//MARK: - Round Button
+final class RoundButton: UIButton {
     
+    //MARK: Override Methods
     override func layoutSubviews() {
         super.layoutSubviews()
         
@@ -21,7 +22,9 @@ class RoundButton: UIButton {
             updateCornerRadius()
         }
     }
-    ///func to round buttons
+    
+    //MARK: Methods
+    ///func to make round buttons
     func updateCornerRadius() {
         layer.cornerRadius = rounded ? frame.size.height / 2 : 0
     }

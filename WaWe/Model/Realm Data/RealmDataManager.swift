@@ -10,7 +10,7 @@ import RealmSwift
 import Realm
 
 //MARK: - Realm Data Manager
-class RealmDataManager {
+final class RealmDataManager {
     ///method to map IngredientExtend to Ingredient
     func mapSpoonacularIngredientToIngredient(for ingredient: ExtendedIngredient) -> Ingredient{
         let name = ingredient.name
@@ -18,6 +18,7 @@ class RealmDataManager {
         let unit = ingredient.unit
         return Ingredient(name: name, quantity: quantity, unit: unit)
     }
+    
     ///method to map create Recipe to current Recipe
     func mapCreatedRecipeToRecipe(for recipeCreated: RecipeCreated)-> Recipe {
         let title = recipeCreated.title
@@ -28,6 +29,7 @@ class RealmDataManager {
         
         return Recipe(title: title, imageString: nil, id: nil, imageData: image, isCreate: true, isFavorite: false, ingredients: ingredients, time: 0, serving: serving, instruction: instruction )
     }
+   
     ///method to map current Recipe to favorite Recipe
     func mapFavoriteRecipeToRecipe(for recipe: FavoriteRecipe)-> Recipe {
         let title = recipe.title
@@ -38,6 +40,7 @@ class RealmDataManager {
         
         return Recipe(title: title, imageString: image, id: nil, imageData: nil, isCreate: false, isFavorite: true,ingredients: ingredients, time: 0, serving: serving, instruction: instruction )
     }
+   
     ///method to transform a List to Array
     fileprivate func transformIngredientListToArray(for recipeCreate: RecipeCreated?, or favoriteRecipe: FavoriteRecipe?)->[Ingredient] {
         var ingredients = [Ingredient]()
@@ -63,8 +66,9 @@ class RealmDataManager {
         return ingredients
     }
 }
+
 //MARK: - Recipe created
-class RecipeCreated: Object {
+final class RecipeCreated: Object {
     @objc dynamic var recipeId: ObjectId = ObjectId.generate()
     @objc dynamic var title: String = ""
     @objc dynamic var servings: Int = 0
@@ -76,8 +80,9 @@ class RecipeCreated: Object {
         return "recipeId"
     }
 }
+
 //MARK: - Favorite Recipe created
-class FavoriteRecipe: Object {
+final class FavoriteRecipe: Object {
     @objc dynamic var recipeId: ObjectId = ObjectId.generate()
     @objc dynamic var title: String = ""
     @objc dynamic var servings: Int = 0
@@ -89,8 +94,9 @@ class FavoriteRecipe: Object {
         return "recipeId"
     }
 }
+
 //MARK: - Ingredient
-class IngredientUsed: Object {
+final class IngredientUsed: Object {
     @objc dynamic var ingredientId : ObjectId = ObjectId.generate()
     @objc dynamic var name: String = ""
     @objc dynamic var ingredientUnity: String = ""

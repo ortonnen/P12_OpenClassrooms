@@ -9,9 +9,8 @@ import UIKit
 import MapKit
 import CoreLocation
 
-
 //MARK: - Map View Controller
-class MapViewController: UIViewController {
+final class MapViewController: UIViewController {
     //MARK: Properties
     let latitudeInit: Double = 48.90638
     let longitudeInit: Double = 2.03782
@@ -21,6 +20,7 @@ class MapViewController: UIViewController {
     let locationManager = CLLocationManager()
     let regionInMeter: Double = 500
     let searchRequest = MKLocalSearch.Request()
+    
     //MARK: Outlet
     @IBOutlet weak var mapView: MKMapView!
     
@@ -43,6 +43,7 @@ class MapViewController: UIViewController {
         let region = MKCoordinateRegion.init(center: coordinateInit, latitudinalMeters: regionInMeter, longitudinalMeters: regionInMeter)
         mapView.setRegion(region, animated: true)
     }
+  
     ///method to search a place
     fileprivate func searchLocation(for place: String) {
         searchRequest.naturalLanguageQuery = place
@@ -64,6 +65,7 @@ class MapViewController: UIViewController {
             }
         })
     }
+  
     ///method to center map on user
     fileprivate func centerViewOnUserLocation() {
         if let location = locationManager.location?.coordinate {
@@ -75,6 +77,7 @@ class MapViewController: UIViewController {
             alerte("Erreur", "Une erreur inconnue est survenue, /n merci de rééssayer plus tard", "Ok")
         }
     }
+    
     ///method to check if user location have authorization
     fileprivate func checkLocationAuthorization() {
         switch CLLocationManager.authorizationStatus() {
@@ -96,6 +99,7 @@ class MapViewController: UIViewController {
             break
         }
     }
+    
     ///method to check if location service is enabled
     fileprivate func checkLocationServices(){
         if CLLocationManager.locationServicesEnabled() {
@@ -106,12 +110,14 @@ class MapViewController: UIViewController {
             mapView.setRegion(region, animated: true)
         }
     }
+    
+    ///method to configure location manager
     fileprivate func setupLocationManager(){
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
     }
-    
 }
+
 //MARK: - Alerte
 extension MapViewController{
     /// user Alerte
@@ -122,6 +128,7 @@ extension MapViewController{
         self.present(alerte, animated: true, completion: nil)
     }
 }
+
 //MARK: - MapView Delegate
 extension MapViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
@@ -145,6 +152,7 @@ extension MapViewController: MKMapViewDelegate {
         return dequeuedView
     }
 }
+
 //MARK: - Location
 extension MapViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {

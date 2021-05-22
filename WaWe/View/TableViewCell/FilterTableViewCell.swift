@@ -12,7 +12,7 @@ enum Filter {
 }
 
 //MARK: Filter Table View Cell
-class FilterTableViewCell: UITableViewCell {
+final class FilterTableViewCell: UITableViewCell {
 
     //MARK: Outlet
     @IBOutlet weak var cuisineTitle: UILabel!
@@ -23,11 +23,10 @@ class FilterTableViewCell: UITableViewCell {
     @IBOutlet weak var intoleranceActivityIndiactor: UIActivityIndicatorView!
     @IBOutlet weak var dietActivityIndiactor: UIActivityIndicatorView!
    
-    //MARK: Methods
+    //MARK: Override Methods
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         if selected {
@@ -38,13 +37,13 @@ class FilterTableViewCell: UITableViewCell {
             self.backgroundColor = #colorLiteral(red: 0.9633114934, green: 0.9485848546, blue: 0.8967990279, alpha: 1)
         }
     }
-    
     override func prepareForReuse() {
         super.prepareForReuse()
         self.textLabel?.textColor = #colorLiteral(red: 0.643104732, green: 0.2448115349, blue: 0.1737442911, alpha: 1)
         self.backgroundColor = #colorLiteral(red: 0.9633114934, green: 0.9485848546, blue: 0.8967990279, alpha: 1)
     }
     
+    //MARK: Methods
     ///configure cell appearance
     func configure(withTitle title: String, for cell : Filter){
         if cell == .cuisine {
@@ -58,6 +57,7 @@ class FilterTableViewCell: UITableViewCell {
         }
     }
     
+    ///method to activity indicator appear
    func titleIsHidden(for tableCell: Filter) {
         switch tableCell {
         case .cuisine:
@@ -76,6 +76,7 @@ class FilterTableViewCell: UITableViewCell {
     }
     
     //MARK: File Private Methods
+    ///methode to show title of cell
     fileprivate func activityIndiactorIsHidden(for tableCell: Filter, with title: String){
         switch tableCell {
         case .cuisine:

@@ -15,9 +15,9 @@ enum RecipeError: Error {
 }
 
 //MARK: - Recipe Service
-class RecipeService {
+final class RecipeService {
     
-    // Properties
+    //MARK: Properties
     static var shared = RecipeService()
     private init() {}
     
@@ -31,7 +31,8 @@ class RecipeService {
         self.informationSession = informationSession
     }
     
-    //Methodes
+    //MARK: Methodes
+    ///request method
     private func createRecipeRequest(with parameters: [String: String] ) -> URLComponents? {
         guard let searchRecipeURL = URL(string: "https://api.spoonacular.com/recipes/complexSearch") else {
             return nil
@@ -87,6 +88,7 @@ extension RecipeService {
         }
         task?.resume()
     }
+    
     ///func to get recipe Information
     func getRecipesInformation(for recipeId: String, callback: @escaping(Result<RecipeInformation,RecipeError>) -> Void) {
         guard let recipeInformationURL = URL(string:"https://api.spoonacular.com/recipes/\(recipeId)/information?apiKey=\(apiKey)") else {

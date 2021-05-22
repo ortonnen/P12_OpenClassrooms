@@ -7,7 +7,7 @@
 
 import UIKit
 //MARK: - More Information View Controller
-class MoreInformationViewController: UIViewController {
+final class MoreInformationViewController: UIViewController {
     
     //MARK: Properties
     var tableViewArray = SpoonacularParameters()
@@ -77,6 +77,7 @@ class MoreInformationViewController: UIViewController {
             self.translateIntolerance()
         }
     }
+    
     ///method to translate element in diet array
     fileprivate func translateDiet() {
         translate(from: "en", to: "fr", for: tableViewArray.diets.joined(separator: ",")) { (translatedText) in
@@ -84,6 +85,7 @@ class MoreInformationViewController: UIViewController {
             self.typeOfDietTableView.reloadData()
         }
     }
+ 
     ///method to translate element in intolerances array
     fileprivate func translateIntolerance() {
        translate(from: "en", to: "fr", for: tableViewArray.intolerances.joined(separator: ",")) { (translatedText) in
@@ -92,6 +94,7 @@ class MoreInformationViewController: UIViewController {
             self.translateDiet()
         }
     }
+  
     ///method to translate String
     fileprivate func translate(from detectedLang: String, to desiredLang: String, for text: String, completion: @escaping(String) -> Void) {
         TranslationService.shared.getTranslate(from: detectedLang, to: desiredLang, for: text) { (result) in
@@ -124,6 +127,7 @@ extension MoreInformationViewController: UITableViewDataSource, UITableViewDeleg
         }
         return count ?? 4
     }
+   
     ///method to determine cell for Row
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if tableView == typeOfCuisinesTableView{
@@ -143,6 +147,7 @@ extension MoreInformationViewController: UITableViewDataSource, UITableViewDeleg
         }
       return UITableViewCell()
     }
+   
     /// method to determine the behavior of a cell when she did select
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath)
@@ -159,6 +164,7 @@ extension MoreInformationViewController: UITableViewDataSource, UITableViewDeleg
             typeOfDietSelected.append(tableViewArray.diets[indexPath.row])
         }
     }
+
     /// method to determine the behavior of a cell when she didDeselect
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath)
@@ -188,6 +194,7 @@ extension MoreInformationViewController: UITableViewDataSource, UITableViewDeleg
             cell?.configure(withTitle: title, for: filter)
         }
     }
+   
     ///method to remove unselected element in array
     fileprivate func removeArray(_ array: [String], _ selection: String) {
         if let index = array.firstIndex(of: selection) {
@@ -200,6 +207,7 @@ extension MoreInformationViewController: UITableViewDataSource, UITableViewDeleg
             }
         }
     }
+   
     ///method to append selected element in array
     fileprivate func appendToArray(_ array: [String], _ selection: String) {
         if array == typeOfCuisineSelected {

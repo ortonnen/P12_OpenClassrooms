@@ -19,7 +19,8 @@ enum TranslationMode {
     case detectLanguage
     case translate
     
-    //Methodes
+    //MARK: Methodes
+    ///method to change URL if is detect language or translate
     func getURL() -> URL {
         var urlString = URL(string: "")
         
@@ -35,15 +36,13 @@ enum TranslationMode {
 }
 
 //MARK: Translation Services
-class TranslationService {
+final class TranslationService {
     
     static var shared = TranslationService()
     private init() {}
     
-    // Properties
-    
+    //MARK: Properties
     private let apiKey = ApiKey.translateApiKey
-    
     private var translationSession = URLSession(configuration: .default)
     private var task: URLSessionDataTask?
     
@@ -51,7 +50,8 @@ class TranslationService {
         self.translationSession = translationSession
     }
     
-    // Methode
+    //MARK: Methode
+    ///request method
     private func createTranslationRequest(for translationMode: TranslationMode, use parameters:[String: String]) -> URLComponents {
         var component = URLComponents(url: translationMode.getURL(), resolvingAgainstBaseURL: true)
         
@@ -63,6 +63,7 @@ class TranslationService {
         return component!
     }
 }
+
 //MARK: - Translate
 extension TranslationService {
     

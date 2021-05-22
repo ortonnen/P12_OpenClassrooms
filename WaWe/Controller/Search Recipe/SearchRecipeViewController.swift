@@ -8,7 +8,7 @@
 import UIKit
 
 //MARK: - Search Recipe View Controller
-class SearchRecipeViewController: UIViewController {
+final class SearchRecipeViewController: UIViewController {
     
     //MARK: Properties
     var ingredients = [String]()
@@ -71,12 +71,14 @@ class SearchRecipeViewController: UIViewController {
         ingredients.append(ingredient)
         ingredientTableView.reloadData()
     }
+    
     /// method to translate ingredient name
     fileprivate func translateIngredient() {
         translate(from: "fr", to: "en", for: ingredients.joined(separator: ",")) { (translatedText) in
             self.getRecipe(with: translatedText)
         }
     }
+    
     ///method to get recipe
     fileprivate func getRecipe(with ingredients: String) {
         let activityIndicator = activityIndicatorAlerte()
@@ -99,6 +101,7 @@ class SearchRecipeViewController: UIViewController {
             activityIndicator.dismiss(animated: true, completion: nil)
         }
     }
+    
     ///method to translate a text
     fileprivate func translate(from detectedLang: String, to desiredLang: String, for text: String, completion: @escaping(String) -> Void) {
         TranslationService.shared.getTranslate(from: detectedLang, to: desiredLang, for: text) { (result) in
@@ -112,6 +115,7 @@ class SearchRecipeViewController: UIViewController {
             }
         }
     }
+    
     /// methode to map JSon Result to Recipe
     fileprivate func mapSpoonacularResult(for spoonacularRecipes: [ResultOfResearch]) {
         var recipeTitle = String()
@@ -120,7 +124,7 @@ class SearchRecipeViewController: UIViewController {
             for recipe in spoonacularRecipes {
                 self.translate(from: "en", to: "fr", for: recipe.title) { (translatedText) in
                     recipeTitle = translatedText
-              
+                    
                     let image = recipe.image
                     let id = recipe.id
                     
@@ -135,6 +139,7 @@ class SearchRecipeViewController: UIViewController {
             }
         }
     }
+    
     ///method to reset array for request
     fileprivate func clear() {
         diet = ""
@@ -145,7 +150,6 @@ class SearchRecipeViewController: UIViewController {
         ingredientTableView.reloadData()
     }
 }
-
 
 //MARK:- Protocol
 extension SearchRecipeViewController: PassingDataDelegateProtocol{
@@ -168,6 +172,7 @@ extension SearchRecipeViewController {
         }
         alerte.addAction(alerteAction)
     }
+    
     /// alert if no recipe found after call network
     private func NoRecipeFoundAlerte() {
         let alerte = UIAlertController(title: "Aucune recette trouvée", message: "\n Merci d'effectuer une nouvelle recherche\n", preferredStyle: .alert)
@@ -175,22 +180,23 @@ extension SearchRecipeViewController {
         alerte.addAction(alerteAction)
         self.present(alerte, animated: true, completion: nil)
     }
-    ///activity Indicator alerte present during the network call
-        private func activityIndicatorAlerte() -> UIAlertController {
-            let alert = UIAlertController(title: "Recherche en cours", message: "Merci de patienter...\n\n\n", preferredStyle: .alert)
-            let activityIndicator = UIActivityIndicatorView()
-            alert.setBackgroundColor(color: #colorLiteral(red: 0.9633114934, green: 0.9485848546, blue: 0.8967990279, alpha: 1))
-            alert.setTitlet(color: #colorLiteral(red: 0.643104732, green: 0.2448115349, blue: 0.1737442911, alpha: 1))
-            alert.setMessage(color: #colorLiteral(red: 0.643104732, green: 0.2448115349, blue: 0.1737442911, alpha: 1))
-            activityIndicator.color = #colorLiteral(red: 0.95542413, green: 0.6744924188, blue: 0.4416911602, alpha: 1)
-            activityIndicator.startAnimating()
-            alert.view.addSubview(activityIndicator)
-            activityIndicator.translatesAutoresizingMaskIntoConstraints = false
-            activityIndicator.centerXAnchor.constraint(equalTo: alert.view.centerXAnchor).isActive = true
-            activityIndicator.bottomAnchor.constraint(equalTo: alert.view.bottomAnchor, constant: -20.0).isActive = true
     
-            return alert
-        }
+    ///activity Indicator alerte present during the network call
+    private func activityIndicatorAlerte() -> UIAlertController {
+        let alert = UIAlertController(title: "Recherche en cours", message: "Merci de patienter...\n\n\n", preferredStyle: .alert)
+        let activityIndicator = UIActivityIndicatorView()
+        alert.setBackgroundColor(color: #colorLiteral(red: 0.9633114934, green: 0.9485848546, blue: 0.8967990279, alpha: 1))
+        alert.setTitlet(color: #colorLiteral(red: 0.643104732, green: 0.2448115349, blue: 0.1737442911, alpha: 1))
+        alert.setMessage(color: #colorLiteral(red: 0.643104732, green: 0.2448115349, blue: 0.1737442911, alpha: 1))
+        activityIndicator.color = #colorLiteral(red: 0.95542413, green: 0.6744924188, blue: 0.4416911602, alpha: 1)
+        activityIndicator.startAnimating()
+        alert.view.addSubview(activityIndicator)
+        activityIndicator.translatesAutoresizingMaskIntoConstraints = false
+        activityIndicator.centerXAnchor.constraint(equalTo: alert.view.centerXAnchor).isActive = true
+        activityIndicator.bottomAnchor.constraint(equalTo: alert.view.bottomAnchor, constant: -20.0).isActive = true
+        
+        return alert
+    }
 }
 
 //MARK: - TableView
@@ -199,6 +205,7 @@ extension SearchRecipeViewController: UITableViewDataSource, UITableViewDelegate
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return ingredients.count
     }
+    
     /// func to return elements  in table View
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ingredientCell", for: indexPath)
@@ -209,6 +216,7 @@ extension SearchRecipeViewController: UITableViewDataSource, UITableViewDelegate
         
         return cell
     }
+    
     ///func to delete cell
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         guard editingStyle == .delete else { return }
@@ -242,7 +250,8 @@ extension SearchRecipeViewController {
             action: #selector(dismissMyKeyboard))
         view.addGestureRecognizer(tap)
     }
-    ///func to dismiss keyaboard
+   
+    ///func to dismiss keyboard
     @objc func dismissMyKeyboard(){
         view.endEditing(true)
     }

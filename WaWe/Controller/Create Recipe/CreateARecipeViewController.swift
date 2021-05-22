@@ -9,7 +9,7 @@ import UIKit
 import RealmSwift
 
 //MARK: - Create Recipe View Controller
-class CreateARecipeViewController: UIViewController {
+final class CreateARecipeViewController: UIViewController {
     //MARK: Properties
     let realm = try? Realm()
     private let pickerImage = UIImagePickerController()
@@ -69,6 +69,7 @@ class CreateARecipeViewController: UIViewController {
         confirmeDeleteIngredient("Ingrédients", "êtes-vous sûre de vouloirs supprimer la liste d'ingédient? ", "Valider", "Annuler")
         ingredientInformationTableView.reloadData()
     }
+    
     //MARK: File private methods
     ///method to choose photo in personnal library
     fileprivate func choosePhotoInLibrary() {
@@ -77,6 +78,7 @@ class CreateARecipeViewController: UIViewController {
         pickerImage.mediaTypes = UIImagePickerController.availableMediaTypes(for: .photoLibrary)!
         present(pickerImage, animated: true, completion: nil)
     }
+    
     ///Realm method to save in DataBase and append in currentIngredient array
     fileprivate func saveIngredient(_ ingredientName: String, _ ingredientQuantity: Float, _ ingredientUnity: String) -> ()? {
         return try! realm?.write({
@@ -88,6 +90,7 @@ class CreateARecipeViewController: UIViewController {
             return realm?.add(ingredient)
         })
     }
+    
     ///method to avoid duplicate ingredients
     fileprivate func checkIfIngredientAlreadyExist(for ingredientName: String, quantity: Float) -> Bool {
         for currentIngredient in currentIngredients {
@@ -98,6 +101,7 @@ class CreateARecipeViewController: UIViewController {
         }
         return false
     }
+  
     ///method to save ingredient list in dataBase
     fileprivate func updateData(_ ingredientName: String, _ quantity: Float, _ unit: String) -> ()? {
         guard ingredientsList.count > 0 else {
@@ -108,6 +112,7 @@ class CreateARecipeViewController: UIViewController {
         }
         return saveIngredient(ingredientName, quantity, unit)
     }
+    
     ///method to add ingredient in ingredient Array
     fileprivate func addIngredient() {
         guard let ingredient = ingredientTextField.text, !ingredient.isEmpty else {
@@ -121,6 +126,7 @@ class CreateARecipeViewController: UIViewController {
         }
         updateData(ingredient, quantity, unit)
     }
+    
     ///method to save recipe in dataBase
     fileprivate func saveRecipe(for recipeTitle: String, servings: Int?, instruction: String?, ingredients: [IngredientUsed], image: UIImage? ){
         try! realm?.write({
@@ -140,6 +146,7 @@ class CreateARecipeViewController: UIViewController {
 
 //MARK: - UIImagePickerView Controller
 extension CreateARecipeViewController:  UINavigationControllerDelegate, UIImagePickerControllerDelegate{
+    
     //MARK: Methods
     ///func to change Image View
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
@@ -163,6 +170,7 @@ extension CreateARecipeViewController: UITableViewDataSource, UITableViewDelegat
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return currentIngredients.count
     }
+    
     ///methode to configure TableViewCell
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ingredientListCreateRecipeCell", for: indexPath) as? IngredientTableViewCell else {
@@ -174,6 +182,7 @@ extension CreateARecipeViewController: UITableViewDataSource, UITableViewDelegat
         cell.configure(withTitle: ingredient, quantity: quantity, unit: unit)
         return cell
     }
+    
     ///methode to delete cell in TebleView
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         guard editingStyle == .delete else { return }
@@ -181,6 +190,7 @@ extension CreateARecipeViewController: UITableViewDataSource, UITableViewDelegat
         tableView.deleteRows(at: [indexPath], with: .automatic)
     }
 }
+
 //MARK: - Keyboard
 extension CreateARecipeViewController {
     ///func to func to define gesture for dismissKeyboard
@@ -195,6 +205,7 @@ extension CreateARecipeViewController {
         view.endEditing(true)
     }
 }
+
 //MARK: -Alerte
 extension CreateARecipeViewController {
     /// user Alerte
@@ -204,6 +215,7 @@ extension CreateARecipeViewController {
         alerte.addAction(alerteAction)
         self.present(alerte, animated: true, completion: nil)
     }
+    
     /// user Alerte with Choice to confirme saved Recipe
     private func confirmeSavedRecipe(_ title: String, _ message: String, _ firstButtonTitle: String, _ secondButtonTitle: String) {
         let alerte = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -219,6 +231,7 @@ extension CreateARecipeViewController {
         alerte.addAction(alerteActionRefuse)
         self.present(alerte, animated: true, completion: nil)
     }
+    
     /// user Alerte with Choice to confirme add ingredient
     private func confirmeAddIngredient(_ title: String, _ message: String, _ firstButtonTitle: String, _ secondButtonTitle: String) {
         let alerte = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -235,6 +248,7 @@ extension CreateARecipeViewController {
         alerte.addAction(alerteActionRefuse)
         self.present(alerte, animated: true, completion: nil)
     }
+    
     /// user Alerte with Choice to confirme delete ingredient
     private func confirmeDeleteIngredient(_ title: String, _ message: String, _ firstButtonTitle: String, _ secondButtonTitle: String) {
         let alerte = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -248,6 +262,7 @@ extension CreateARecipeViewController {
         alerte.addAction(alerteActionRefuse)
         self.present(alerte, animated: true, completion: nil)
     }
+    
     ///user Alerte to confirme action
     private func confirmationAlerte(_ title: String?, _ message: String?) {
         let confirmationAlerte = UIAlertController(title: title, message: message, preferredStyle: .alert)

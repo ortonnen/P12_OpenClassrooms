@@ -8,11 +8,15 @@
 import UIKit
 import RealmSwift
 
-class NavigationFavoriteViewController: UINavigationController {
+//MARK: Navigation View Controllet
+final class NavigationFavoriteViewController: UINavigationController {
+    
+    //MARK: Properties
     let realmDataManager = RealmDataManager()
     let realm = try? Realm()
     var recipes = [Recipe]()
 
+    //MARK: Override methods
     override func viewDidLoad() {
         super.viewDidLoad()
         reloadFavoriteRecipe()
@@ -20,17 +24,16 @@ class NavigationFavoriteViewController: UINavigationController {
             recipeVC.recipes = recipes
         }
     }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         reloadFavoriteRecipe()
         if let recipeVC = self.topViewController as? RecipeViewController {
             recipeVC.recipes = recipes
         }
-
     }
 
     //MARK: File Private Methods
+    ///method to map favorite recipe to recipe
     fileprivate func map(){
         guard let dataRecipes = realm?.objects(FavoriteRecipe.self) else {return}
         guard dataRecipes.count > 0 else {
@@ -40,6 +43,7 @@ class NavigationFavoriteViewController: UINavigationController {
         }
     }
 
+    ///method to reload view
     fileprivate func reloadFavoriteRecipe() {
         recipes.removeAll()
         map()

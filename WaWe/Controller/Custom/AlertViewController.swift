@@ -6,9 +6,10 @@
 //
 
 import UIKit
+
 //MARK: - UIAlerteController
 extension UIAlertController {
-    ///Set background color of UIAlertController
+    ///set background color of UIAlertController
     func setBackgroundColor(color: UIColor) {
         if let bgView = self.view.subviews.first,
            let groupView = bgView.subviews.first,
@@ -16,7 +17,8 @@ extension UIAlertController {
             contentView.backgroundColor = color
         }
     }
-    ///Set  title color
+    
+    ///set  title color
     func setTitlet(color: UIColor?) {
         guard let title = self.title else { return }
         let attributeString = NSMutableAttributedString(string: title)
@@ -27,7 +29,8 @@ extension UIAlertController {
         }
         self.setValue(attributeString, forKey: "attributedTitle")
     }
-    ///Set  message color
+    
+    ///set  message color
     func setMessage(color: UIColor?) {
         guard let message = self.message else { return }
         let attributeString = NSMutableAttributedString(string: message)

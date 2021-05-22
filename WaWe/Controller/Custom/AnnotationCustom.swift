@@ -8,7 +8,8 @@
 import MapKit
 import UIKit
 
-class AnnotationCustom: NSObject, MKAnnotation {
+//MARK: - Custom Annitation for Map
+final class AnnotationCustom: NSObject, MKAnnotation {
     var title: String?
     var subtitle: String?
     var coordinate: CLLocationCoordinate2D

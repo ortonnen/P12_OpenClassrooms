@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ApiKey {
+final class ApiKey {
     static var translateApiKey = "AIzaSyDCNJ6S52AdcHjE9lL7sHC9T9aYxXs5nhE"
     static var spoonacularApiKey = "cda7fd4246c3460b8e5d752e105cbc8c"
 }

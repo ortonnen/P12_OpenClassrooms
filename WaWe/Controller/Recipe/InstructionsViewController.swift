@@ -10,7 +10,7 @@ import AlamofireImage
 import RealmSwift
 
 //MARK: - Instruction View Controller
-class InstructionsViewController: UIViewController {
+final class InstructionsViewController: UIViewController {
     
     //MARK: Properties
     let recipeVC = RecipeViewController()
@@ -59,7 +59,6 @@ class InstructionsViewController: UIViewController {
             self.updateView(self.recipe)
             activityIndicator.dismiss(animated: true, completion: nil)
         }
-        
     }
     
     //MARK: Action
@@ -103,6 +102,7 @@ class InstructionsViewController: UIViewController {
             }
         }
     }
+    
     ///method to translate Recipe
     fileprivate func translate(text: String, completion: @escaping(String) -> Void) {
         TranslationService.shared.getTranslate(from: "en", to: "fr", for: text) { (result) in
@@ -114,7 +114,8 @@ class InstructionsViewController: UIViewController {
                 }
         }
     }
-    ///method to translate name and unit for ingredient
+    
+    ///method to translate name for ingredient
     fileprivate func translateIngredientName(for ingredients: [Ingredient]){
         DispatchQueue.main.async {
             self.recipe.ingredients.removeAll()
@@ -134,6 +135,8 @@ class InstructionsViewController: UIViewController {
             self.ingredientInformationTableView.reloadData()
         }
     }
+    
+    ///method to translate unit for ingredient
     fileprivate func translateIngredientUnit(for ingredients: [Ingredient]){
         DispatchQueue.main.async {
             self.recipe.ingredients.removeAll()
@@ -153,6 +156,7 @@ class InstructionsViewController: UIViewController {
             self.ingredientInformationTableView.reloadData()
         }
     }
+    
     ///method to update the display according to the type of recipe
     fileprivate func updateRecipeDisplay() {
         if checkIfRecipeIsCreate() == true {
@@ -163,6 +167,7 @@ class InstructionsViewController: UIViewController {
             getInstruction(for: id)
         }
     }
+   
     ///method to update view
     fileprivate func updateView(_ recipe: Recipe) {
         recipeTitleLabel.text = recipe.title
@@ -170,6 +175,7 @@ class InstructionsViewController: UIViewController {
         servingLabel.text = "\(recipe.serving )"
         instructionTextView.text = recipe.instruction
     }
+   
     /// update recipe information
     fileprivate func updateRecipe(_ recipeInstruction: RecipeInformation) {
         self.recipe.title = recipeInstruction.title ?? self.recipe.title
@@ -182,6 +188,7 @@ class InstructionsViewController: UIViewController {
         }
         translateIngredientName(for: recipe.ingredients)
     }
+    
     ///method to update Image for Recipe
     fileprivate func updateImage() {
         if recipe.imageString != nil {
@@ -192,6 +199,7 @@ class InstructionsViewController: UIViewController {
             recipeImageView.image = UIImage.init(data: data)
         }
     }
+  
     ///method to check if recipe is create by user
     fileprivate func checkIfRecipeIsCreate()->Bool? {
         if recipe.isCreate == false {
@@ -199,6 +207,7 @@ class InstructionsViewController: UIViewController {
         }
         return true
     }
+    
     ///method to check if Recipe is favorite
     fileprivate func checkIfRecipeIsFavorite()-> Bool? {
         for favoriteRecipe in favoriteRecipeList {
@@ -209,6 +218,7 @@ class InstructionsViewController: UIViewController {
         }
         return false
     }
+  
     ///method to delete recipe create from Realm
     fileprivate func deleteRecipeCreated() {
         try! realm?.write({
@@ -222,6 +232,7 @@ class InstructionsViewController: UIViewController {
             }
         })
     }
+   
     ///method to delete favorite recipe from Realm
     fileprivate func deleteFavoriteRecipe() {
         try! realm?.write({
@@ -233,6 +244,7 @@ class InstructionsViewController: UIViewController {
             }
         })
     }
+   
     ///method to add current Recipe in favorite Recipe
     fileprivate func addToFavorite() {
         try! realm?.write({
@@ -250,6 +262,7 @@ class InstructionsViewController: UIViewController {
         })
         alerte("Favoris", "La recette a été correctement ajoutée aux favoris", "ok")
     }
+    
     ///method to save Ingredient
     fileprivate func saveIngredient(for recipe: Recipe)->[IngredientUsed]{
         var ingredientsUsed = [IngredientUsed]()
@@ -263,13 +276,16 @@ class InstructionsViewController: UIViewController {
         return ingredientsUsed
     }
 }
+
 //MARK: - TableView
 extension InstructionsViewController: UITableViewDelegate{
 }
+
 extension InstructionsViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return recipe.ingredients.count
     }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ingredientListRecipeCell", for: indexPath) as? IngredientTableViewCell else {
             return UITableViewCell()
@@ -291,6 +307,7 @@ extension InstructionsViewController{
         alerte.addAction(alerteAction)
         self.present(alerte, animated: true, completion: nil)
     }
+    
     ///user Alerte to dismiss View Controller
     private func dismissAlerte(_ title: String, _ message: String, _ buttonTitle: String, completion:(()->Void)?){
         let alerte = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -300,6 +317,7 @@ extension InstructionsViewController{
         alerte.addAction(alerteAction)
         self.present(alerte, animated: true, completion: nil)
     }
+    
     ///activity Indicator alerte present during the network call
         private func activityIndicatorAlerte() -> UIAlertController {
             let alert = UIAlertController(title: "Recherche en cours", message: "Merci de patienter...\n\n\n", preferredStyle: .alert)

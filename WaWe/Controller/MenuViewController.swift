@@ -21,7 +21,6 @@ class MenuViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print ( Realm.Configuration .defaultConfiguration.fileURL!)
-//        deleteAllData()
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
@@ -68,6 +67,7 @@ class MenuViewController: UIViewController {
             realm?.deleteAll()
         })
     }
+    
     ///method to map Created Recipe in Recipe for recipe tableview
     fileprivate func map() {
         guard let dataRecipes = realm?.objects(RecipeCreated.self) else {return}
@@ -78,8 +78,10 @@ class MenuViewController: UIViewController {
         }
     }
 }
+
 //MARK: - Alerte
 extension MenuViewController {
+    ///alerte if no recipe is created
     private func noRecipeCreateAlerte() {
         let alerte = UIAlertController(title: "Aucune recette trouvée", message: "\n Vous n'avez pas de recette enregistrée\n", preferredStyle: .alert)
         let alerteAction = UIAlertAction(title: "ok", style: .cancel, handler: nil)
