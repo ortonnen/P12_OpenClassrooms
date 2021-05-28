@@ -383,7 +383,6 @@
                                                             <color key="titleColor" red="0.59607845540000004" green="0.270588249" blue="0.20000001789999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="tappedAddInstructionButton:" destination="TG4-3p-FrY" eventType="touchUpInside" id="zhi-s5-9JP"/>
                                                             <segue destination="guK-ik-uav" kind="presentation" id="v6M-ME-165"/>
                                                         </connections>
                                                     </button>
@@ -454,6 +453,7 @@
                     <navigationItem key="navigationItem" id="BRc-UF-Ww9"/>
                     <connections>
                         <outlet property="addImageButton" destination="Xgm-Lp-aen" id="hVb-an-U2g"/>
+                        <outlet property="addInstructionButton" destination="QJZ-bb-fhc" id="xZ5-yI-7lI"/>
                         <outlet property="ingredientInformationTableView" destination="wJ7-le-Q4u" id="Uw7-bL-Ahd"/>
                         <outlet property="ingredientTextField" destination="ndO-6g-9C9" id="9d5-G1-s7E"/>
                         <outlet property="quantityTextField" destination="jZx-p3-Zit" id="Lt1-Em-xyS"/>

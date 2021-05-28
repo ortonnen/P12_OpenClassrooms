@@ -29,8 +29,8 @@ final class CreateARecipeViewController: UIViewController {
     @IBOutlet weak var unitTextField: UITextField!
     @IBOutlet weak var ingredientInformationTableView: UITableView!
     @IBOutlet weak var addImageButton: UIButton!
+    @IBOutlet weak var addInstructionButton: UIButton!
     
-   
     //MARK: Methods override
     override func viewDidLoad() {
         super.viewDidLoad()
