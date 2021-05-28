@@ -20,7 +20,7 @@ class MenuViewController: UIViewController {
     //MARK: Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        print ( Realm.Configuration .defaultConfiguration.fileURL!)
+        pathToDataBase()
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
@@ -76,6 +76,12 @@ class MenuViewController: UIViewController {
         for recipeCreated in dataRecipes{
             recipes.append(realmDataManager.mapCreatedRecipeToRecipe(for: recipeCreated))
         }
+    }
+    
+    ///method to search data Base
+    fileprivate func pathToDataBase() {
+        guard let realmConfiguration = Realm.Configuration .defaultConfiguration.fileURL else { return }
+        print( realmConfiguration )
     }
 }
 

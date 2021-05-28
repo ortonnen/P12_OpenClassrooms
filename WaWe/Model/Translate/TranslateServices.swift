@@ -26,10 +26,12 @@ enum TranslationMode {
         
         switch self {
         case .detectLanguage:
-            urlString = URL(string:"https://translation.googleapis.com/language/translate/v2/detect")!
+            guard let detectLanguageURL = URL(string:"https://translation.googleapis.com/language/translate/v2/detect") else { break }
+                urlString = detectLanguageURL
             
         case .translate:
-            urlString = URL(string:"https://translation.googleapis.com/language/translate/v2")!
+            guard let translateURL = URL(string:"https://translation.googleapis.com/language/translate/v2") else { break }
+            urlString = translateURL
         }
         return urlString!
     }

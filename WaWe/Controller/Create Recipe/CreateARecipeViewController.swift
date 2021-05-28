@@ -73,9 +73,10 @@ final class CreateARecipeViewController: UIViewController {
     //MARK: File private methods
     ///method to choose photo in personnal library
     fileprivate func choosePhotoInLibrary() {
+        guard let mediaTypes = UIImagePickerController.availableMediaTypes(for: .photoLibrary) else { return }
         pickerImage.allowsEditing = true
         pickerImage.sourceType = .photoLibrary
-        pickerImage.mediaTypes = UIImagePickerController.availableMediaTypes(for: .photoLibrary)!
+        pickerImage.mediaTypes = mediaTypes
         present(pickerImage, animated: true, completion: nil)
     }
     
