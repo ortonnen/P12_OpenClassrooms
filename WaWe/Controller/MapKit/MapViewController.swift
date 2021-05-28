@@ -27,8 +27,8 @@ final class MapViewController: UIViewController {
     //MARK: Override methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.mapView.layoutMargins = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
-        mapView.delegate = self
+//        self.mapView.layoutMargins = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
+//        mapView.delegate = self
         
         defineInitialLocation()
         searchLocation(for: "food market")
@@ -57,6 +57,7 @@ final class MapViewController: UIViewController {
                 guard let name = item.name else { return }
                 guard let info = item.placemark.title else { return }
                 let pinAnnotation = MKPointAnnotation()
+              
                 pinAnnotation.coordinate = item.placemark.coordinate
                 pinAnnotation.title = name
                 pinAnnotation.subtitle = info
@@ -131,26 +132,6 @@ extension MapViewController{
 
 //MARK: - MapView Delegate
 extension MapViewController: MKMapViewDelegate {
-    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        
-        guard let title = annotation.title else { return annotation as? MKAnnotationView }
-        guard let subtitle = annotation.subtitle else { return annotation as? MKAnnotationView}
-        let customAnnotation = AnnotationCustom(title: title ?? "", subtitle: subtitle ?? "", coordinate: annotation.coordinate)
-        let identifier = "Annotation"
-        var dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
-        
-        if  dequeuedView == nil {
-            let annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
-            annotationView.pinTintColor = #colorLiteral(red: 0.95542413, green: 0.6744924188, blue: 0.4416911602, alpha: 1)
-            dequeuedView = annotationView
-            dequeuedView?.annotation = customAnnotation
-            dequeuedView?.canShowCallout = true
-            
-        } else {
-            dequeuedView?.annotation = annotation
-        }
-        return dequeuedView
-    }
 }
 
 //MARK: - Location
